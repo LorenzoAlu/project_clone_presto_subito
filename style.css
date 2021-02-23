@@ -76,6 +76,35 @@ header {
 }
 
 
+
+/* search bar  */
+
+.search-bar{
+    box-shadow: 1px 1px 10px black;
+    height: 300px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: -290px;
+    width:80%;
+}
+
+@media screen and (min-width:768px){
+    .search-bar{
+        height:150px;
+        
+    }
+}
+
+@media screen and (max-width:768px){
+    .search-bar{
+        margin-top: -240px;
+    }
+
+    .logo-header {
+        margin-top:-40px;
+    }
+}
+
 /* sezione card skill */
 
 .card-skill{

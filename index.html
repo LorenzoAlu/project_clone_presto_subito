@@ -20,7 +20,8 @@
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-secondary-color fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="./media/logo-w.png" width="50px" alt="logo "></a>
-            <button type="button" class="btn btn-outline-light mx-2 d-block d-md-none" data-bs-toggle="modal"            data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-outline-light mx-2 d-block d-md-none" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
                 <i class="fas fa-user red-lent"></i>
             </button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
@@ -42,9 +43,10 @@
                         <a class="nav-link" href="#">Link 3 </a>
                     </li>
                 </ul>
-                <button type="button" class="btn btn-outline-light mx-2 d-none d-md-block" data-bs-toggle="modal"            data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-outline-light mx-2 d-none d-md-block" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
                     <i class="fas fa-user red-lent"></i>
-                </button>  
+                </button>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Ricerca prodotto " aria-label="Search">
                     <button class="btn btn-outline-light red-lent" type="submit">
@@ -59,35 +61,73 @@
     <header class="container-fluid">
         <div class="row align-items-center h-100">
             <div class="col-12">
-                <img src="./media/logo.png" class="d-block mx-auto" alt="">
+                <img src="./media/logo.png" class="d-block mx-auto logo-header" alt="">
             </div>
         </div>
     </header>
 
+    <section class="container-fluid bg-secondary-color d-flex justify-content-center align-items-center bg-secondary-color py-5">
+        <div class="row search-bar d-flex justify-content-center align-items-center bg-white ">
+            <div class="col-1"></div>
+            <div class="col-12 col-md-3">
+                <div class="form-group">
+                    <label for="ricerca">Cosa cerchi scemo?</label>
+                    <input type="text" class="form-control" id="ricerca" placeholder="cerca cerca qua">
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="form-group">
+                    <label for="categorydropdown">seleziona la categoria</label>
+                    <select id="categorydropdown" class="form-control">
+                        <option selected>dimmi dimmi dai </option>
+                        <option>Motori</option>
+                        <option>Abbigliamento</option>
+                        <option>Elettronica</option>
+                        <option>Sport</option>
+                        <option>Babbi</option>
+                        <option>Musica</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="form-group">
+                    <label for="where">Dove lo cerchi??</label>
+                    <input type="text" class="form-control" id="where" placeholder="inserisci la tua regione">
+                </div>
+            </div>
+            <div class="col-12 col-md-1">
+                <button class="btn btn-outline-light bg-secondary-color   w-100" type="submit">
+                    <i class="fas fa-search d-none d-md-block"></i>
+                    <p class="text-white d-block d-md-none"> Cerca.</p>
+                </button>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </section>
 
     <!-- carte skills -->
 
-    <section class="container-fluid bg-secondary-color pb-5">
+    <section class="container-fluid bg-secondary-color pb-5 ">
         <div class="row justify-content-center">
-            <div class="col-6 col-md-3 d-flex justify-content-center ">
+            <div class="col-6 col-md-3 d-flex justify-content-center my-2">
                 <div class="card-skill main-color shadow bg-white">
                     <i class="fas fa-user-md fa-2x mt-4"></i>
                     <p>125</p>
                 </div>
             </div>
-            <div class="col-6 col-md-3 d-flex justify-content-center ">
+            <div class="col-6 col-md-3 d-flex justify-content-center my-2">
                 <div class="card-skill main-color shadow bg-white">
                     <i class="fas fa-biking fa-2x mt-4"></i>
                     <p>125</p>
                 </div>
             </div>
-            <div class="col-6 col-md-3 d-flex justify-content-center ">
+            <div class="col-6 col-md-3 d-flex justify-content-center my-2">
                 <div class="card-skill main-color shadow bg-white">
                     <i class="fas fa-meh fa-2x mt-4"></i>
                     <p>125</p>
                 </div>
             </div>
-            <div class="col-6 col-md-3 d-flex justify-content-center ">
+            <div class="col-6 col-md-3 d-flex justify-content-center my-2">
                 <div class="card-skill main-color shadow bg-white">
                     <i class="fas fa-poo fa-2x mt-4"></i>
                     <p>125</p>
@@ -458,35 +498,39 @@
 
     <section class="container-fluid">
         <div class="row ">
-        
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content ">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">
-                         Log In 
-                        </h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Log In
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="./media/logo.png" width="50px" class="img-fluid mx-auto d-block" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn white-modal  bg-secondary-color "
+                                data-bs-dismiss="modal">Close</button>
+                            <button type="button"
+                                class="btn btn-outline-light red-modal secondary-color modal-border ">Save
+                                changes</button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                      <img src="./media/logo.png" width="50px" class="img-fluid mx-auto d-block" alt="">
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn white-modal  bg-secondary-color " data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-outline-light red-modal secondary-color modal-border ">Save changes</button>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            
+            </div>
+
         </div>
     </section>
 
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
- integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
- crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/4ff5c0a70f.js" crossorigin="anonymous"></script>
-<script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4ff5c0a70f.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
 
 
 </body>
