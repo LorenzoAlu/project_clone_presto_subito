@@ -1,23 +1,27 @@
-body{
-    margin:0px;
+body {
+    margin: 0px;
     padding: 0px;
 }
 
-*{font-family: 'Roboto', sans-serif;
+* {
+    font-family: 'Roboto', sans-serif;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Unica One', cursive;
 }
 
-:root{
-    --main-color:rgb(164,23,38); 
-    --secondary-color:rgba(207,23,23,1) ;
-    --accent-color:rgb(249,188,91);
+:root {
+    --main-color: rgb(164, 23, 38);
+    --secondary-color: rgba(207, 23, 23, 1);
+    --accent-color: rgb(249, 188, 91);
 }
 
-.main-color{
-    color:var(--main-color);
+.main-color {
+    color: var(--main-color);
 }
 
 .bg-main-color {
@@ -25,7 +29,7 @@ h1,h2,h3 {
 }
 
 .secondary-color {
-    color:var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .bg-secondary-color {
@@ -33,138 +37,113 @@ h1,h2,h3 {
 }
 
 .accent-color {
-    color:var(--accent-color);
+    color: var(--accent-color);
 }
 
-.bg-accent{
-
+.bg-accent {
     background-color: var(--accent-color);
 }
 
 
+
+
 /* navbar  */
 
-
-.nav-custom {
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    height: 50px;
-    background: var(--secondary-color);
-    z-index: 999;
+.red-lent{
+    color:white ;
 }
 
-#pulsante {
-    display: none;
+.red-lent:hover{
+    color:var(--secondary-color)!important;
 }
 
-.labelpulsante {
-color: white;
-font-size: 25px;
-position: absolute;
-top:2px;
-right:20px;
-transition: 1s;
-z-index: 9999;
+.border-custom-navbar {
 
-
+    border-bottom: 2px solid black ;
 }
 
-.menu   {
-    position: fixed;
-   
-    height:100vh ;
-    background: var(--main-color);
-    opacity: 1;
-    width: 100%;
-    top:-100%;
-    right:0;
-    z-index: 999;
-    transition: 1s;
-    margin: 0px;
-   
-    
-}
-
-.menu p  {
-    text-transform: uppercase;
-    font-size: 15px ;
-}
-
-#pulsante:checked ~ .menu {
-    top: 0%;
-    right:0%;
-}
-
-
-#pulsante:checked ~ .labelpulsante {
-
-transform: rotate(-90deg);
+#navbar {
+    transition: 400ms;
 }
 
 
 
 /* header  */
+
 header {
     width: 100%;
     height: 100vh;
-    background: rgb(207,23,23);
-    background: linear-gradient(7deg, rgba(207,23,23,1) 30%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(207,23,23,1) 70%); 
-    }
+    background: rgb(207, 23, 23);
+    background: linear-gradient( rgba(207, 23, 23, 1) 30%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(207, 23, 23, 1) 70%);
+}
 
+
+/* sezione card skill */
+
+.card-skill{
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    border-radius: 15px 50px;
+    /* margin-top: -80px; */
+}
 
 /* sezione 1  */
 
-.nav-pills .nav-link.active{
-
-    background-color: var(--main-color) ;
-    border:1px solid var(--accent-color);
+.nav-pills .nav-link.active {
+    background-color: var(--main-color);
+    border: 1px solid var(--accent-color);
 }
 
-.card-custom{
-
-    border:2px solid var(--main-color);
+.card-custom {
+    border: 2px solid var(--main-color);
 }
 
-.btn-custom{
-   
+.btn-custom {
     display: inline-block;
     background-color: white;
     text-decoration: none;
     border: 2px solid var(--main-color);
-    padding: 10px 60px ;
+    padding: 10px 60px;
     text-transform: uppercase;
     color: var(--main-color);
     transition: 0.5s;
-    background:linear-gradient(90deg, white 50%, var(--main-color) 50%);
-    background-size:200% ;
-    background-position: 0px 0px ;
+    background: linear-gradient(90deg, white 50%, var(--main-color) 50%);
+    background-size: 200%;
+    background-position: 0px 0px;
     position: relative;
     z-index: 1;
 }
- 
 
 .btn-custom-icon {
     position: absolute;
-    left: 45px ;
+    left: 45px;
 }
+
 .btn-custom:hover {
-    background-position: -115% ;
+    background-position: -115%;
     color: white;
 }
 
 
+/* presentazione azienda  */
 
+    .box-custom{
+        border-radius: 15px 50px;
+        border:1px solid var(--main-color);
+        padding: 5px;
+    }
 
 
 /* footer  */
 
 
-
 /* bottone custom  */
 
-
-.button-4{
+.btn-social {
     display: inline-block;
     height: 50px;
     width: 200px;
@@ -175,8 +154,8 @@ header {
     font-weight: bold;
     letter-spacing: 2px;
     transition: 0.4s;
-position:relative;
-
+    position: relative;
+    margin-top: -100px;
 }
 
 .links {
@@ -184,20 +163,18 @@ position:relative;
     height: 50px;
     width: 200px;
     background-color: white;
-    left:-1px;
+    left: -1px;
     top: -1px;
     opacity: 0;
-    transition: 0.4s  ;
+    transition: 0.4s;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
 }
 
-.button-4:hover .links{
-   opacity: 1; 
+.btn-social:hover .links {
+    opacity: 1;
 }
-
 
 a.button-4-box {
     width: 40px;
@@ -211,35 +188,51 @@ a.button-4-box {
     transition: 1s;
 }
 
-
 a.button-4-box:hover {
     transform: rotateZ(45deg);
-
 }
 
 a.botton-4-box i {
     transition: 1ms;
 }
 
-a.button-4-box:hover i{
-
+a.button-4-box:hover i {
     transform: rotateZ(-45deg);
-    transition: 1s; 
-    
+    transition: 1s;
 }
 
 a.button-4-box:not(:hover) i {
-    
     transform: rotateZ(0deg);
-    transition: 1s; 
-    
+    transition: 1s;
 }
 
-.button-4:hover {
-
-border:none;
-transform: scale(1.4);
+.btn-social:hover {
+    border: none;
+    transform: scale(1.4);
 }
 
 
+/* modal  */
 
+
+.modal-border {
+    border:1px solid var(--secondary-color);
+}
+
+.red-modal {
+    color: var(--secondary-color);
+}
+
+.red-modal:hover{
+    color:var(--secondary-color);
+    box-shadow: 1px 1px 5px black;
+}
+
+.white-modal {
+    color: white ;
+}
+
+.white-modal:hover{
+    color:white ;
+    box-shadow: 1px 1px 5px black;
+}
