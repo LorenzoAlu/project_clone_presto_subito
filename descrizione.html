@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Unica+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+
+    <title>Subito.it</title>
+</head>
+
+<body>
+
+
+    <!-- nav bar cazzi amari  -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-secondary-color fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="./media/logo-w.png" width="50px" alt="logo "></a>
+            <button type="button" class="btn btn-outline-light mx-2 d-block d-md-none" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                <i class="fas fa-user red-lent"></i>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 1 </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 2 </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 3 </a>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-outline-light mx-2 d-none d-md-block" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    <i class="fas fa-user red-lent"></i>
+                </button>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Ricerca prodotto " aria-label="Search">
+                    <button class="btn btn-outline-light red-lent" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="container-fluid mt-5 pt-5">
+        <div class="row">
+            <div class="col-12 my-3 ">
+                <h2 class="secondary-color">scheda prodotto</h2>
+            </div>
+            <div class="col-12 col-md-6 h-100">
+                <!-- Swiper -->
+                <div class="swiper-container gallery-top">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/500/300" class=" mx-auto img-fluid d-block"
+                                alt="immagine azienda">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/501/300" class=" mx-auto img-fluid d-block"
+                                alt="immagine azienda">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/502/300" class=" mx-auto img-fluid d-block"
+                                alt="immagine azienda">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/499/300" class=" mx-auto img-fluid d-block"
+                                alt="immagine azienda">
+                        </div>
+
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+                </div>
+                <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/500/300" class=" mx-auto img-fluid d-block"
+                                alt="immagine azienda">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/501/300" class=" mx-auto img-fluid d-block"
+                                alt="immagine azienda">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/502/300" class=" mx-auto img-fluid d-block"
+                                alt="immagine azienda">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/499/300" class=" mx-auto img-fluid d-block"
+                                alt="immagine azienda">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-6">
+                <h3 class="secondary-color">Nome prodotto </h3>
+                <h4>Categoria </h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore eligendi eum nesciunt iure, amet,
+                    doloribus inventore esse magni, aliquam architecto quae minus aspernatur corporis dolorum error
+                    sapiente saepe non rem.</p>
+            </div>
+        </div>
+
+        <div class="row py-4">
+            <div class="col-12 col-md-6">
+                <h2 class="secondary-color">Info Prodotto</h2>
+                <ul>
+                    <li>Categoria: motori </li>
+                    <li>Data pubblicazione: 12 set</li>
+                    <li>Prezzo: sedicentieuro $</li>
+                    <li>Location: Voto 10</li>
+                    <li>Status:Single</li>
+                    <li>Ciolla:Ciollis</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6">
+                <h2 class="secondary-color">Info Venditori</h2>
+                <ul>
+                    <li>Nome: <a href="">Mona</a> </li>
+                    <li>Pubblica dal: 1901</li>
+                    <li>Località : Ciollauz - TN</li>
+                    <li>Arrestato: 10 volte</li>
+
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- altro carosello  -->
+
+
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="secondary-color">
+                    Annunci Simili
+                </h3>
+            </div>
+
+            <div class="col-12">
+                <!-- Swiper -->
+                <div class="swiper-container secondContainer">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card-custom-carousel-2 " style="width: 100px;">
+                                <img src="https://picsum.photos/100/80" class="d-block mx-auto img-fluid"
+                                    alt="immagine prodotto">
+                                <div class="card-body">
+                                    <p class="card-title  text-center "> Nome articolo</p>
+                                    <a class="btn bg-secondary-color text-white" href="#" role="button">Visita</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-custom-carousel-2 " style="width: 100px;">
+                                <img src="https://picsum.photos/100/80" class="d-block mx-auto img-fluid"
+                                    alt="immagine prodotto">
+                                <div class="card-body">
+                                    <p class="card-title  text-center "> Nome articolo</p>
+                                    <a class="btn bg-secondary-color text-white" href="#" role="button">Visita</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-custom-carousel-2 " style="width: 100px;">
+                                <img src="https://picsum.photos/100/80" class="d-block mx-auto img-fluid"
+                                    alt="immagine prodotto">
+                                <div class="card-body">
+                                    <p class="card-title  text-center "> Nome articolo</p>
+                                    <a class="btn bg-secondary-color text-white" href="#" role="button">Visita</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-custom-carousel-2 " style="width: 100px;">
+                                <img src="https://picsum.photos/100/80" class="d-block mx-auto img-fluid"
+                                    alt="immagine prodotto">
+                                <div class="card-body">
+                                    <p class="card-title  text-center "> Nome articolo</p>
+                                    <a class="btn bg-secondary-color text-white" href="#" role="button">Visita</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-custom-carousel-2 " style="width: 100px;">
+                                <img src="https://picsum.photos/100/80" class="d-block mx-auto img-fluid"
+                                    alt="immagine prodotto">
+                                <div class="card-body">
+                                    <p class="card-title  text-center "> Nome articolo</p>
+                                    <a class="btn bg-secondary-color text-white" href="#" role="button">Visita</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-custom-carousel-2 " style="width: 100px;">
+                                <img src="https://picsum.photos/100/80" class="d-block mx-auto img-fluid"
+                                    alt="immagine prodotto">
+                                <div class="card-body">
+                                    <p class="card-title  text-center "> Nome articolo</p>
+                                    <a class="btn bg-secondary-color text-white" href="#" role="button">Visita</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-custom-carousel-2 " style="width: 100px;">
+                                <img src="https://picsum.photos/100/80" class="d-block mx-auto img-fluid"
+                                    alt="immagine prodotto">
+                                <div class="card-body">
+                                    <p class="card-title  text-center "> Nome articolo</p>
+                                    <a class="btn bg-secondary-color text-white" href="#" role="button">Visita</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-custom-carousel-2 " style="width: 100px;">
+                                <img src="https://picsum.photos/100/80" class="d-block mx-auto img-fluid"
+                                    alt="immagine prodotto">
+                                <div class="card-body">
+                                    <p class="card-title  text-center "> Nome articolo</p>
+                                    <a class="btn bg-secondary-color text-white" href="#" role="button">Visita</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-custom-carousel-2 " style="width: 100px;">
+                                <img src="https://picsum.photos/100/80" class="d-block mx-auto img-fluid"
+                                    alt="immagine prodotto">
+                                <div class="card-body">
+                                    <p class="card-title  text-center "> Nome articolo</p>
+                                    <a class="btn bg-secondary-color text-white" href="#" role="button">Visita</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-custom-carousel-2 " style="width: 100px;">
+                                <img src="https://picsum.photos/100/80" class="d-block mx-auto img-fluid"
+                                    alt="immagine prodotto">
+                                <div class="card-body">
+                                    <p class="card-title  text-center "> Nome articolo</p>
+                                    <a class="btn bg-secondary-color text-white" href="#" role="button">Visita</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer  -->
+
+
+    <section class="container-fluid mt-5 bg-secondary-color text-white">
+        <div class="row justify-content-evenly">
+            <div class="col-12">
+                <img src="./media/logo-w.png" width="70px" alt="logo sito">
+                <h2>Lorem</h2>
+            </div>
+
+
+            <div class="col-12 col-md-6">
+                <h3>Info legali</h3>
+                <p class="small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis ex sunt recusandae quod
+                    cupiditate porro explicabo impedit dolores quia reprehenderit! Id, est praesentium iure
+                    exercitationem ullam dolore et provident distinctio?</p>
+            </div>
+
+
+            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center d-none d-lg-flex">
+                <button class="btn-social">
+                    <div class="links">
+                        <a href="" class="button-4-box">
+                            <i class="fab fa-facebook-f facebook"></i>
+                        </a>
+                        <a href="" class="button-4-box">
+                            <i class="fab fa-google google"></i>
+                        </a>
+                        <a href="" class="button-4-box">
+                            <i class="fab fa-instagram instagram"></i>
+                        </a>
+                        <a href="" class="button-4-box ">
+                            <i class="fab fa-twitter twitter"></i>
+                        </a>
+                    </div>
+                    <span>
+                        Social!
+                    </span>
+                </button>
+            </div>
+
+            <div class="col-12 col-md-6 d-flex justify-content-around align-items-center d-flex d-lg-none my-3">
+                <a href="">
+                    <i class="text-white fab fa-facebook-f"></i>
+                </a>
+                <a href="">
+                    <i class="text-white fab fa-instagram"></i>
+                </a>
+                <a href="">
+                    <i class="text-white fab fa-linkedin"></i>
+                </a>
+                <a href="">
+                    <i class="text-white fab fa-twitter"></i>
+                </a>
+            </div>
+
+            <!-- mappa di google  -->
+            <!-- <div class="col-8 my-3 mx-auto d-block">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.362372823569!2d10.513726931685625!3d44.552881572474874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478006e1127e7097%3A0x26079b0d15993d91!2s42034%20Ciolla%20RE!5e0!3m2!1sit!2sit!4v1614032329810!5m2!1sit!2sit" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div> -->
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- modale per login  -->
+
+    <section class="container-fluid">
+        <div class="row ">
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Log In
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="./media/logo.png" width="50px" class="img-fluid mx-auto d-block" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn white-modal  bg-secondary-color "
+                                data-bs-dismiss="modal">Close</button>
+                            <button type="button"
+                                class="btn btn-outline-light red-modal secondary-color modal-border ">Save
+                                changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4ff5c0a70f.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+    <!-- script del carosella  -->
+    <script>
+
+        const galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 5,
+            slidesPerView: 4,
+            loop: true,
+            freeMode: true,
+            loopedSlides: 5, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        const galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 10,
+            loop: true,
+            loopedSlides: 5, //looped slides should be the same
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs,
+            },
+        });
+
+        // js carousel secondo 
+
+        const swiperSecond = new Swiper('.swiper-container.secondContainer', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            // init: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                },
+            }
+        });
+
+
+    </script>
+
+
+
+</body>
+
+</html>
