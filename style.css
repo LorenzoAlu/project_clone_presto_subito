@@ -50,15 +50,11 @@ h4 {
 .red-lent{
     color:white ;
 }
-
 .red-lent:hover{
     color:var(--secondary-color)!important;
 }
 
-.border-custom-navbar {
 
-    border-bottom: 2px solid black ;
-}
 
 #navbar {
     transition: 400ms;
@@ -72,9 +68,18 @@ header {
     width: 100%;
     height: 100vh;
     background: rgb(207, 23, 23);
-    background: linear-gradient( rgba(207, 23, 23, 1) 30%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(207, 23, 23, 1) 70%);
+    background: linear-gradient(  rgba(255, 255, 255, 1) 70%, rgba(207, 23, 23, 1) 70%);
 }
 
+.red-lent-nav{
+    color:white ;
+    width:100%;
+    height: 40px ;
+}
+
+.red-lent-nav:hover{
+    color:var(--secondary-color)!important;
+}
 
 
 /* search bar  */
@@ -84,7 +89,7 @@ header {
     height: 300px;
     border-radius: 5px;
     border: 1px solid black;
-    margin-top: -290px;
+    
     width:80%;
 }
 
@@ -95,7 +100,7 @@ header {
     }
 }
 
-@media screen and (max-width:768px){
+/* @media screen and (max-width:768px){
     .search-bar{
         margin-top: -240px;
     }
@@ -103,7 +108,7 @@ header {
     .logo-header {
         margin-top:-40px;
     }
-}
+} */
 
 /* sezione card skill */
 
@@ -331,5 +336,30 @@ a.button-4-box:not(:hover) i {
     border-radius: 0px 30px;
     border:1px solid var(--secondary-color);
     overflow: hidden;
-    margin-left: 50px;
+}
+
+
+/* css scheda prodotto */
+
+
+.header{
+
+    height: 50vh;
+    min-height: 400px;
+    background: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url(https://picsum.photos/1920/540);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card-scheda-prodotto{
+    border-radius: 0px 30px;
+    border:1px solid var(--secondary-color);
+    overflow: hidden;
+    width: 200px;
+    margin: 5px;
+    padding: 0;
+    height: 320px;
+    transition: 1s;
+    
 }
