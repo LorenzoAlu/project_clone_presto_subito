@@ -22,7 +22,7 @@
             <a class="navbar-brand" href="#">
                 <img id="logo" width="50px" alt="logo "></a>
                 <button id="signbtn" type="button" class="btn  mx-2 d-block d-md-none" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">
+                data-bs-target="#modal-custom">
                 <i class=" fas fa-user "></i>
             </button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
@@ -45,7 +45,7 @@
                 </li>
             </ul>
             <button id="signbtn1" type="button" class="btn  mx-2 d-none d-md-block  " data-bs-toggle="modal"
-            data-bs-target="#exampleModal">
+            data-bs-target="#modal-custom">
             <i class=" fas fa-user "></i>
         </button>
     </div>
@@ -55,11 +55,13 @@
 <!-- header  -->
 <header class="container-fluid">
     <div class="row align-items-center h-75 pt-md-5 pt-0 mt-2 ">
-        <div class="col-12   ">
+        <div class="col-12  z-class ">
             <img src="./media/logo.png" class="py-3 my-5 d-block mx-auto logo-header" alt="">
         </div>
+        <span class="skewedOne"></span>
+        <span class="skewedTwo"></span>
         <div class="col-12 justify-content-center d-flex align-items-center h-25">
-            <div class="row search-bar d-flex justify-content-center align-items-center bg-white ">
+            <div class="row search-bar d-flex justify-content-center align-items-center bg-white z-class ">
                 <div class="col-1"></div>
                 <div class="col-12 col-md-3">
                     <div class="form-group">
@@ -495,47 +497,59 @@
                                                 
                                                 <!-- modale per login  -->
                                                 
-                                                <section class="container-fluid">
+                                               
+                                                
+                                                   <section class="container-fluid">
                                                     <div class="row ">
-                                                        
-                                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                                        aria-hidden="true">
-                                                        <div class="modal-dialog modal-dialog-centered">
-                                                            <div class="modal-content ">   
-                                                                
-                                                                    <form class="login">
-                                                                        <div class="d-flex justify-content-end">
-                                                                            <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                        </div>
-                                                                        <div>
-                                                                            <img src="./media/logo.png" width="50px" class="img-fluid mx-auto d-block" alt="">
-                                                                        </div>
-                                                                        
-                                                                        <input class="input-login" type="text" placeholder="Username">
-                                                                        <input  class="input-login" type="password" placeholder="Password">
+                                                        <div class="modal fade" id="modal-custom" tabindex="-1">
+                                                            <div class="modal-dialog modal-dialog-centered">
+                                                                <form class="login modal-content ">
+                                                                    <div class="d-flex justify-content-end">
+                                                                        <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                    </div>
+                                                                    <div>
+                                                                        <img src="./media/logo.png" width="50px" class="img-fluid mx-auto d-block" alt="">
+                                                                    </div>
+                                                                    <input class="input-login" type="text" placeholder="Username">
+                                                                    <input  class="input-login" type="password" placeholder="Password">
+                                                                    <div>
                                                                         <button class="btn-login">Login</button>
-                                                                    </form>
-                                                                
-                                                                
+                                                                        <button class="btn-login ms-2">SingIn</button>
+                                                                    </div>
+                                                                </form>   
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </section>
+                                                
+                                                
+                                                
+<script>
+                                                    
+                                                    const skewedOne = document.querySelector('.skewedOne')
+                                                    
+                                                    const skewedTwo = document.querySelector('.skewedTwo')
+                                                    
+                                                    window.addEventListener('scroll',()=> {
+                                                        const value1 = -15 + window.scrollY/30
+                                                        const value2 = 15 + window.scrollY/-30
+                                                        
+                                                        skewedOne.style.transform = "sKewY(" + value1 + "deg)";
+                                                        skewedTwo.style.transform = "sKewY(" + value2 + "deg)";
+                                                        
+                                                    })
                                                     
                                                     
-                                                </section>
+                                                    
+                                                    
+                                                    
+                                                    
+</script>
                                                 
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-                                                integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-                                                crossorigin="anonymous"></script>
-                                                <script src="https://kit.fontawesome.com/4ff5c0a70f.js" crossorigin="anonymous"></script>
-                                                <script src="./main.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/4ff5c0a70f.js" crossorigin="anonymous"></script>
+<script src="./main.js"></script>
                                                 
                                                 
                                             </body>

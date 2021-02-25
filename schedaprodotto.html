@@ -68,7 +68,7 @@
 <section class="container-fluid">
     
     <div class="row justify-content-evenly">
-        <div class=" col-12 col-md-3">
+        <div class=" col-12 col-md-3" style="position:sticky; top: 100px;">
             
             <h3>Filtra per:</h3>
             <!-- primo bottone  -->
@@ -77,7 +77,7 @@
                 data-bs-toggle="collapse" data-bs-target="#categoryFilter" aria-expanded="false"
                 aria-controls="categoryFilter">
                 Categoria
-            </button>
+                </button>
             <div class="collapse" id="categoryFilter">
                 <div id="categoriesWrapper" class="py-3">
                 </div>
@@ -87,24 +87,24 @@
             data-bs-toggle="collapse" data-bs-target="#priceFilter" aria-expanded="false"
             aria-controls="priceFilter">
             Prezzo
-        </button>
-        <div class="collapse" id="priceFilter">
-            <div class="pt-5">
-                <div class="d-flex justify-content-between">
-                    <span>0</span>
-                    <span id="choosenPrice"></span>
-                    <span id="maxPriceShown">Max</span>
+            </button>
+            <div class="collapse" id="priceFilter">
+                <div class="pt-5">
+                    <div class="d-flex justify-content-between">
+                        <span>0</span>
+                        <span id="choosenPrice"></span>
+                        <span id="maxPriceShown">Max</span>
+                    </div>
+                    <input type="range" class="form-range" id="priceRange" min="0" max="230">
                 </div>
-                <input type="range" class="form-range" id="priceRange" min="0" max="230">
             </div>
-        </div>
         <!-- terzo bottone  -->
-        <div>
+            <div>
             <button class="py-3 my-3 btn bg-secondary-color text-white w-100" type="button"
             data-bs-toggle="collapse" data-bs-target="#wordFilter" aria-expanded="false"
             aria-controls="wordFilter">
             Parola
-        </button>
+            </button>
         <div class="collapse" id="wordFilter">
             <input type="text" class="form-control" id="searchWord"
             aria-describedby="emailHelp">
