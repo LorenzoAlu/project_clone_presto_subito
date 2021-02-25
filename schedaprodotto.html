@@ -5,114 +5,127 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Unica+One&display=swap" rel="stylesheet">
-
+    
     <title>Subito.it</title>
 </head>
 
 <body>
-
-
+    
+    
     <!-- nav bar cazzi amari  -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-transparent  fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img id="logo" width="50px" alt="logo "></a>
-            <button id="signbtn" type="button" class="btn  mx-2 d-block d-md-none" data-bs-toggle="modal"
+                <button id="signbtn" type="button" class="btn  mx-2 d-block d-md-none" data-bs-toggle="modal"
                 data-bs-target="#exampleModal">
                 <i class=" fas fa-user "></i>
             </button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
-                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 1 </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 2 </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3 </a>
+                </li>
+            </ul>
+            <button id="signbtn1" type="button" class="btn  mx-2 d-none d-md-block  " data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            <i class=" fas fa-user "></i>
+        </button>
+    </div>
+</div>
+</nav>
+
+
+
+<section class="container-fluid header">
+    <div class="row align-items-center   h-100">
+        <div class="col-12 ">
+            <h1 class="secondary-color">
+                I Nostri Articoli
+            </h1>
+        </div>
+    </div>
+</section>
+
+
+<section class="container-fluid">
+    
+    <div class="row justify-content-evenly">
+        <div class=" col-12 col-md-3">
+            
+            <h3>Filtra per:</h3>
+            <!-- primo bottone  -->
+            <div>
+                <button class="py-3 my-3 btn bg-secondary-color text-white w-100" type="button"
+                data-bs-toggle="collapse" data-bs-target="#categoryFilter" aria-expanded="false"
+                aria-controls="categoryFilter">
+                Categoria
             </button>
-            <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link 1 </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link 2 </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link 3 </a>
-                    </li>
-                </ul>
-                <button id="signbtn1" type="button" class="btn  mx-2 d-none d-md-block  " data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-                    <i class=" fas fa-user "></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-
-
-    <section class="container-fluid header">
-        <div class="row align-items-center   h-100">
-            <div class="col-12 ">
-                <h1 class="secondary-color">
-                    I Nostri Articoli
-                </h1>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="container-fluid">
-
-        <div class="row justify-content-evenly">
-            <div class=" col-12 col-md-3 bg-danger">
-
-                <h3>Filtra per:</h3>
-                <!-- primo bottone  -->
-                <div>
-                    <button class="py-3 my-3 btn bg-secondary-color text-white" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#categoryFilter" aria-expanded="false" aria-controls="categoryFilter">
-                        Categoria
-                    </button>
-                    <div class="collapse" id="categoryFilter">
-                        <div id="categoriesWrapper" class="py-3">
-                        </div>
-                    </div>
-                    <!-- secondo bottone  -->
-                    <button class="py-3 my-3 btn bg-secondary-color text-white" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#priceFilter" aria-expanded="false" aria-controls="priceFilter">
-                        Prezzo
-                    </button>
-                    <div class="collapse" id="priceFilter">
-                        <div class="pt-5">
-                            <div class="d-flex justify-content-between">
-                                <span>0</span>
-                                <span id="choosenPrice"></span>
-                                <span id="maxPriceShown">Max</span>
-                            </div>
-                            <input type="range" class="form-range" id="priceRange" min="0" max="230">
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-            <div class=" col-12 col-md-9 d-flex justify-content-center">
-                <div id="productsWrapper" class="row justify-content-center">
-
+            <div class="collapse" id="categoryFilter">
+                <div id="categoriesWrapper" class="py-3">
                 </div>
             </div>
-
-
+            <!-- secondo bottone  -->
+            <button class="py-3 my-3 btn bg-secondary-color text-white w-100" type="button"
+            data-bs-toggle="collapse" data-bs-target="#priceFilter" aria-expanded="false"
+            aria-controls="priceFilter">
+            Prezzo
+        </button>
+        <div class="collapse" id="priceFilter">
+            <div class="pt-5">
+                <div class="d-flex justify-content-between">
+                    <span>0</span>
+                    <span id="choosenPrice"></span>
+                    <span id="maxPriceShown">Max</span>
+                </div>
+                <input type="range" class="form-range" id="priceRange" min="0" max="230">
+            </div>
         </div>
+        <!-- terzo bottone  -->
+        <div>
+            <button class="py-3 my-3 btn bg-secondary-color text-white w-100" type="button"
+            data-bs-toggle="collapse" data-bs-target="#wordFilter" aria-expanded="false"
+            aria-controls="wordFilter">
+            Parola
+        </button>
+        <div class="collapse" id="wordFilter">
+            <input type="text" class="form-control" id="searchWord"
+            aria-describedby="emailHelp">
+        </div>
+    </div>
+</div>
 
-    </section>
+
+</div>
+
+
+<div class=" col-12 col-md-9 d-flex justify-content-center">
+    <div id="productsWrapper" class="row justify-content-center">
+        
+    </div>
+</div>
+
+
+</div>
+
+</section>
 
 
 
@@ -120,25 +133,25 @@
 
 
 
-    <!-- footer  -->
+<!-- footer  -->
 
 
-    <section class="container-fluid py-5 bg-secondary-color text-white">
-        <div class="row justify-content-evenly">
-            <div class="col-12">
-                <img src="./media/logo-w.png" width="70px" alt="logo sito">
-                <h2>Lorem</h2>
+<section class="container-fluid py-5 bg-secondary-color text-white">
+    <div class="row justify-content-evenly">
+        <div class="col-12">
+            <img src="./media/logo-w.png" width="70px" alt="logo sito">
+            <h2>Lorem</h2>
+        </div>
+        
+        
+        <div class="col-12 col-md-6">
+            <h3>Info legali</h3>
+            <p class="small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis ex sunt recusandae quod
+                cupiditate porro explicabo impedit dolores quia reprehenderit! Id, est praesentium iure
+                exercitationem ullam dolore et provident distinctio?</p>
             </div>
-
-
-            <div class="col-12 col-md-6">
-                <h3>Info legali</h3>
-                <p class="small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis ex sunt recusandae quod
-                    cupiditate porro explicabo impedit dolores quia reprehenderit! Id, est praesentium iure
-                    exercitationem ullam dolore et provident distinctio?</p>
-            </div>
-
-
+            
+            
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-center d-none d-lg-flex">
                 <button class="btn-social">
                     <div class="links">
@@ -160,7 +173,7 @@
                     </span>
                 </button>
             </div>
-
+            
             <div class="col-12 col-md-6 d-flex justify-content-around align-items-center d-flex d-lg-none my-3">
                 <a href="">
                     <i class="text-white fab fa-facebook-f"></i>
@@ -175,142 +188,148 @@
                     <i class="text-white fab fa-twitter"></i>
                 </a>
             </div>
-
+            
             <!-- mappa di google  -->
             <!-- <div class="col-8 my-3 mx-auto d-block">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.362372823569!2d10.513726931685625!3d44.552881572474874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478006e1127e7097%3A0x26079b0d15993d91!2s42034%20Ciolla%20RE!5e0!3m2!1sit!2sit!4v1614032329810!5m2!1sit!2sit" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div> -->
-
-
+            
+            
         </div>
-
-
+        
+        
     </section>
-
-
-
-
+    
+    
+    
+    
     <!-- modale per login  -->
-
+    
     <section class="container-fluid">
         <div class="row ">
-
+            
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content ">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">
-                                Log In
-                            </h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="./media/logo.png" width="50px" class="img-fluid mx-auto d-block" alt="">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn white-modal  bg-secondary-color "
-                                data-bs-dismiss="modal">Close</button>
-                            <button type="button"
-                                class="btn btn-outline-light red-modal secondary-color modal-border ">Save
-                                changes</button>
-                        </div>
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            Log In
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./media/logo.png" width="50px" class="img-fluid mx-auto d-block" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn white-modal  bg-secondary-color "
+                        data-bs-dismiss="modal">Close</button>
+                        <button type="button"
+                        class="btn btn-outline-light red-modal secondary-color modal-border ">Save
+                        changes</button>
                     </div>
                 </div>
             </div>
-
         </div>
-    </section>
+        
+    </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/4ff5c0a70f.js" crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/4ff5c0a70f.js" crossorigin="anonymous"></script>
+<script src="./main.js"></script>
 
-    <script>
-
-        const categoriesWrapper = document.querySelector('#categoriesWrapper')
-        const productWrappers = document.querySelector('#productsWrapper')
-
-
-        fetch('./data.json')
-            .then(response => response.json())
-            .then(data => {
-
-                const categories = Array.from(new Set(data.map(el => el.category))).sort()
-
-
-                categories.forEach(el => {
-
-                    let div = document.createElement("div")
-                    div.classList.add("form-check")
-                    div.innerHTML =
-
-                        `
+<script>
+    
+    const categoriesWrapper = document.querySelector('#categoriesWrapper')
+    const productWrappers = document.querySelector('#productsWrapper')
+    
+    
+    fetch('./data.json')
+    .then(response => response.json())
+    .then(data => {
+        
+        const categories = Array.from(new Set(data.map(el => el.category))).sort()
+        
+        
+        categories.forEach(el => {
+            
+            let div = document.createElement("div")
+            div.classList.add("form-check")
+            div.innerHTML =
+            
+            `
             <input class="form-check-input" type="radio" name="categories" id="${el.toLowerCase()}" >
             <label class="form-check-label" for="${el.toLowerCase()}">
                 ${el}
             </label> 
             `
-                    categoriesWrapper.appendChild(div)
-
-
-
-
-                })
-
-                let all = document.createElement("div")
-                all.classList.add("form-check")
-                all.innerHTML =
-
-                    `
+            categoriesWrapper.appendChild(div)
+            
+            
+            
+            
+        })
+        
+        let all = document.createElement("div")
+        all.classList.add("form-check")
+        all.innerHTML =
+        
+        `
         <input class="form-check-input" type="radio" name="categories" id="all" >
         <label class="form-check-label" for="all">
             mostra tutti 
         </label> 
         `
-                categoriesWrapper.appendChild(all)
-
-
-
-                const filters = document.querySelectorAll('[name="categories"]')
-
-
-                filters.forEach(el => {
-                    el.addEventListener('click', () => {
-                        let clickedCategory = el.id
-
-
-                        if (clickedCategory != "all") {
-                            const filteredProducts = data.filter(prodotti => prodotti.category.toLowerCase() == clickedCategory)
-                            showProducts(filteredProducts)
-                        } else {
-                            showProducts(data)
-                        }
-
-
-
-
-
-                    })
-                })
-
-
-
-
-
-
-                function showProducts(products) {
-
-                    productWrappers.innerHTML = ""
-                    products.forEach(el => {
-                        let div = document.createElement('div')
-                        div.classList.add('col-12', 'col-md-6', 'col-lg-4', 'mb-3', 'card-scheda-prodotto')
-
-                        div.innerHTML =
-
-                            `
+        categoriesWrapper.appendChild(all)
+        
+        
+        
+        const filters = document.querySelectorAll('[name="categories"]')
+        
+        
+        filters.forEach(el => {
+            el.addEventListener('click', () => {
+                let clickedCategory = el.id
+                
+                
+                if (clickedCategory != "all") {
+                    const filteredProducts = data.filter(prodotti => prodotti.category.toLowerCase() == clickedCategory)
+                    showProducts(filteredProducts)
+                } else {
+                    showProducts(data)
+                }
+                
+                
+                
+                
+                
+            })
+        })
+        
+        
+        
+        
+        
+        
+        function showProducts(products) {
+            
+            productWrappers.innerHTML = ""
+            
+            //adesso ordino i prodotti in modo che vengano disposti in ordine alfabetico , per farlo creo un nuovo let soarted dall oggetto e per rendere tutti i bottoni indipendenti converto brutalmente il json lo commento perche voglio vedere se riesco a farli comunicare fra loro 
+            // let soarted = JSON.parse(JSON.stringify(products)).sort((a,b)=> a.name.localeCompare(b.name)))
+            let soarted = products.sort((a, b) => a.name.localeCompare(b.name))
+            
+            
+            soarted.forEach(el => {
+                let div = document.createElement('div')
+                div.classList.add('col-12', 'col-md-6', 'col-lg-4', 'mb-3', 'card-scheda-prodotto')
+                
+                div.innerHTML =
+                
+                `
                 <img src="https://picsum.photos/200/130" class="d-block mx-auto img-fluid"
                 alt="immagine prodotto">
                 <div class="card-body ">
@@ -326,54 +345,71 @@
                 </div>
                 
                 `
-                        productWrappers.appendChild(div)
-
-
-                    })
-
-                }
-
-                showProducts(data)
-
-
-
-                //range prezzo
-                // trovo prezzo max, trasformo con ... object in arrow, con map prendo l elemento price, lo trasformo da stringa a numero e con math max ottengo valore piu alto
-                const maxPrice = Math.max(...data.map(el => Number(el.price)))
-
-
-                // creo costante valore max e lo inserisco dentro snan prezzo massimo con inner, cosi lo vedo 
-                const maxPriceshown = document.querySelector('#maxPriceShown')
-                maxPriceshown.innerHTML = maxPrice + "£"
-
-                //creo costante che fa il modo di dare al ciollo del range un valore , cosi quando apro il ciollo avro il range fissato al max , per farlo do alla proprieta value di quella barra di minchia il value max
-                const priceRange = document.querySelector('#priceRange')
-                priceRange.max = maxPrice
-                priceRange.value = maxPrice
-
-
-                // do id allo  span centrale cosi che cambi al cambiare del ciollo , ora devo concetenare il ciollo col valore cosi che il numero sopra lo span centrale cambi quando cambi il ciollo, devo usare una addevent 
-
-                const choosenPrice = document.querySelector('#choosenPrice')
-                choosenPrice.innerHTML = maxPrice + "£"
-
-                priceRange.addEventListener('input', () => {
-
-                    choosenPrice.innerHTML = priceRange.value + "£"
-                    // filtro i prodotti da data, dopo che gli ho filtrati lancio la funzione creata prima qua dentro, in sto modo filtrero i vari annunci al variare dell'oggett
-                    const filteredProducts = data.filter(el => Number(el.price) <= priceRange.value)
-
-                    setTimeout(() => {
-                        showProducts(filteredProducts)
-                        //aggiungo set timeout per far si che gli articoli si caricano piu lentamente migliorando la user experience
-                        //comunque fa schifo 
-                    }, 500)
-
-                })
-
+                productWrappers.appendChild(div)
+                
+                
             })
-
-    </script>
+            
+        }
+        
+        showProducts(data)
+        
+        
+        
+        //range prezzo
+        // trovo prezzo max, trasformo con ... object in arrow, con map prendo l elemento price, lo trasformo da stringa a numero e con math max ottengo valore piu alto
+        const maxPrice = Math.max(...data.map(el => Number(el.price)))
+        
+        
+        // creo costante valore max e lo inserisco dentro snan prezzo massimo con inner, cosi lo vedo 
+        const maxPriceshown = document.querySelector('#maxPriceShown')
+        maxPriceshown.innerHTML = maxPrice + "£"
+        
+        //creo costante che fa il modo di dare al ciollo del range un valore , cosi quando apro il ciollo avro il range fissato al max , per farlo do alla proprieta value di quella barra di minchia il value max
+        const priceRange = document.querySelector('#priceRange')
+        priceRange.max = maxPrice
+        priceRange.value = maxPrice
+        
+        
+        // do id allo  span centrale cosi che cambi al cambiare del ciollo , ora devo concetenare il ciollo col valore cosi che il numero sopra lo span centrale cambi quando cambi il ciollo, devo usare una addevent 
+        
+        const choosenPrice = document.querySelector('#choosenPrice')
+        choosenPrice.innerHTML = maxPrice + "£"
+        
+        priceRange.addEventListener('input', () => {
+            
+            choosenPrice.innerHTML = priceRange.value + "£"
+            // filtro i prodotti da data, dopo che gli ho filtrati lancio la funzione creata prima qua dentro, in sto modo filtrero i vari annunci al variare dell'oggett
+            const filteredProducts = data.filter(el => Number(el.price) <= priceRange.value)
+            
+            setTimeout(() => {
+                showProducts(filteredProducts)
+                //aggiungo set timeout per far si che gli articoli si caricano piu lentamente migliorando la user experience
+                //comunque fa schifo 
+            }, 500)  
+        })
+        
+        
+        const searchWord =document.querySelector('#searchWord')
+        
+        searchWord.addEventListener('input', ()=>{
+            // all input uso to lower case per far si che la ricerca funzioni anche se si scrive sia in minuscolo che in maiuscolo, poi uso if per far si che non mi cerchi le parole sotto le due lettere, creo value e poi filtro i prodotti sempre da data con filter, ad ogni elemento contenuto nel data prendo la proprietò nome, lo metto in lower case e uso includes(value) per far si che la ricerca includa pure le seconde e le terze parole 
+            let value =searchWord.value.toLowerCase()
+            if(value.length > 2){
+                const filteredProducts= data.filter(el => el.name.toLowerCase().includes(value))
+                
+                showProducts(filteredProducts)
+            }
+            
+            
+        })
+        
+        
+        
+        
+    })
+    
+</script>
 
 
 </body>
