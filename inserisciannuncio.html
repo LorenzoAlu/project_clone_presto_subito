@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Unica+One&display=swap" rel="stylesheet">
+
+    <title>Subito.it</title>
+
+    <style>
+        .login-page {
+            overflow: hidden;
+            background-color: white;
+            padding: 40px 30px 30px 30px;
+            border-radius: 10px;
+            position: relative;
+            top: 290px;
+            left: 50%;
+            width: 90%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transition: -webkit-transform 300ms, box-shadow 300ms;
+            -moz-transition: -moz-transform 300ms, box-shadow 300ms;
+            transition: transform 300ms, box-shadow 300ms;
+            box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2);
+        }
+
+        .login-page::before,
+        .login-page::after {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-top-left-radius: 40%;
+            border-top-right-radius: 45%;
+            border-bottom-left-radius: 35%;
+            border-bottom-right-radius: 40%;
+            z-index: -1;
+        }
+
+        .login-page::before {
+            left: 50%;
+            bottom: -20%;
+            background-color: orangered;
+            -webkit-animation: wawes 6s infinite linear;
+            -moz-animation: wawes 6s infinite linear;
+            animation: wawes 6s infinite linear;
+        }
+
+        .login-page::after {
+            left: 30%;
+            bottom: -40%;
+            background-color: var(--secondary-color);
+            -webkit-animation: wawes 7s infinite;
+            -moz-animation: wawes 7s infinite;
+            animation: wawes 7s infinite;
+        }
+
+        .login-page .input-login {
+            font-family: "Asap", sans-serif;
+            display: block;
+            border-radius: 5px;
+            font-size: 16px;
+            background: white;
+            width: 100%;
+            border: 0;
+            padding: 10px 10px;
+            margin: 15px -10px;
+        }
+
+        .login-page .btn-login {
+            font-family: "Asap", sans-serif;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            width: 200px;
+            border: 0;
+            padding: 10px 0;
+            margin-top: 10px;
+            margin-left: -5px;
+            border-radius: 5px;
+            background-color: var(--secondary-color);
+            -webkit-transition: background-color 300ms;
+            -moz-transition: background-color 300ms;
+            transition: background-color 300ms;
+        }
+
+        .login-page .btn-login:hover {
+            background-color: var(--main-color);
+        }
+
+        /* sovrascrivo certe proprieta delle classi di bootstrap  */
+        .input-group-custom {
+            position: relative;
+            width: 100%;
+            display: flex;
+            font-size: 16px;
+            background: white;
+            width: 100%;
+            border: 0;
+            padding: 10px 10px;
+            margin: 15px -10px;
+            align-items: center;
+
+        }
+
+
+        
+.input-group-text-custom {
+  display: flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  background-color:var(--secondary-color);
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  height: 100%;
+  
+}
+
+
+.form-control-custom {
+  display: block;
+  width: 100%  ;
+  padding:0;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  height: 100%;
+  
+ 
+}
+    </style>
+
+
+</head>
+
+<body>
+    <!-- nav bar cazzi amari  -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-transparent  fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img id="logo" width="50px" alt="logo "></a>
+            <button id="signbtn" type="button" class="btn  mx-2 d-block d-md-none" data-bs-toggle="modal"
+                data-bs-target="#modal-custom">
+                <i class=" fas fa-user "></i>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 1 </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 2 </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 3 </a>
+                    </li>
+                </ul>
+                <button id="signbtn1" type="button" class="btn  mx-2 d-none d-md-block  " data-bs-toggle="modal"
+                    data-bs-target="#modal-custom">
+                    <i class=" fas fa-user "></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- header  -->
+    <section class="container-fluid header">
+        <div class="row align-items-end   h-100">
+            <div class="col-12 text-center mb-4 z-class ">
+                <img src="./media/logo.png" alt="logo">
+            </div>
+            <span class="skewedOneS"></span>
+            <span class="skewedTwoS"></span>
+
+        </div>
+    </section>
+
+
+    <!-- inserisci annuncio  -->
+    <section class="container-fluid py-5 bg-grey  ">
+        <div class="row  justify-content-center  align-items-center  " style="height: 800px;">
+           
+            <div class="col-12 pb-5 mb-5">
+            <h1 class="text-center secondary-color">
+                Inserisci Annuncio 
+            </h1>
+        </div>
+            
+            <div class="col-12">  
+                <form class="login-page ">
+                    <div>
+                        <img src="./media/logo.png" width="100px" class="img-fluid mx-auto d-block" alt="foto logo">
+                    </div>
+                    <p class="secondary-color p-0 m-0">Inserisci Foto</p>
+                    <div class="input-group-custom mb-3">
+                        <input type="file" class="form-control-custom" id="uploadPhoto">
+                        <label class="input-group-text-custom" for="uploadPhoto">Carica</label>
+                    </div>
+                    <p class="secondary-color p-0 m-0">Inseriri Categoria</p>
+
+                    <input class="input-login" type="text" placeholder="Categoria">
+                    <p class="secondary-color p-0 m-0">Inserisci Prezzo</p>
+
+                    <input class="input-login" type="text" placeholder="Prezzo">
+                    <p class="secondary-color p-0 m-0">Inserisci Luogo</p>
+
+                    <input class="input-login" type="text" placeholder="Luogo">
+                    <p class="secondary-color p-0 m-0">Inserisci Stato Prodotto</p>
+
+                    <input class="input-login" type="text" placeholder="Stato Prodotto">
+                    
+                    <div>
+                        <button class="btn-login">Inserisci Annuncio</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- footer  -->
+
+
+    <section class="container-fluid py-5 bg-secondary-color text-white">
+        <div class="row justify-content-evenly">
+            <div class="col-12">
+                <img src="./media/logo-w.png" width="70px" alt="logo sito">
+                <h2>Lorem</h2>
+            </div>
+
+
+            <div class="col-12 col-md-6">
+                <h3>Info legali</h3>
+                <p class="small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis ex sunt recusandae quod
+                    cupiditate porro explicabo impedit dolores quia reprehenderit! Id, est praesentium iure
+                    exercitationem ullam dolore et provident distinctio?</p>
+            </div>
+
+
+            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center d-none d-lg-flex">
+                <button class="btn-social">
+                    <div class="links">
+                        <a href="" class="button-4-box">
+                            <i class="fab fa-facebook-f facebook"></i>
+                        </a>
+                        <a href="" class="button-4-box">
+                            <i class="fab fa-google google"></i>
+                        </a>
+                        <a href="" class="button-4-box">
+                            <i class="fab fa-instagram instagram"></i>
+                        </a>
+                        <a href="" class="button-4-box ">
+                            <i class="fab fa-twitter twitter"></i>
+                        </a>
+                    </div>
+                    <span>
+                        Social!
+                    </span>
+                </button>
+            </div>
+
+            <div class="col-12 col-md-6 d-flex justify-content-around align-items-center d-flex d-lg-none my-3">
+                <a href="">
+                    <i class="text-white fab fa-facebook-f"></i>
+                </a>
+                <a href="">
+                    <i class="text-white fab fa-instagram"></i>
+                </a>
+                <a href="">
+                    <i class="text-white fab fa-linkedin"></i>
+                </a>
+                <a href="">
+                    <i class="text-white fab fa-twitter"></i>
+                </a>
+            </div>
+
+            <!-- mappa di google  -->
+            <!-- <div class="col-8 my-3 mx-auto d-block">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.362372823569!2d10.513726931685625!3d44.552881572474874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478006e1127e7097%3A0x26079b0d15993d91!2s42034%20Ciolla%20RE!5e0!3m2!1sit!2sit!4v1614032329810!5m2!1sit!2sit" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div> -->
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- modale per login  -->
+    <section class="container-fluid">
+        <div class="row ">
+            <div class="modal fade" id="modal-custom" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <form class="login modal-content ">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn-close " data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div>
+                            <img src="./media/logo.png" width="50px" class="img-fluid mx-auto d-block" alt="">
+                        </div>
+                        <input class="input-login" type="text" placeholder="Username">
+                        <input class="input-login" type="password" placeholder="Password">
+                        <div>
+                            <button class="btn-login">Login</button>
+                            <button class="btn-signup ms-2">Sing Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4ff5c0a70f.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+
+
+
+</body>
+<!-- RICORDATI CHE IL CSS DEL FORM E' INTERNO MONA  -->
+
+</html>

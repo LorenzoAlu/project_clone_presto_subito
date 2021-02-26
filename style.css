@@ -44,6 +44,16 @@ h4 {
     background-color: var(--accent-color);
 }
 
+.bg-grey {
+    background-color: #e3e3e3;
+
+}
+
+.sticky-filter{
+    position: sticky;
+    top: 100px;
+}
+
 
 /* navbar  */
 
@@ -54,12 +64,17 @@ h4 {
     color:var(--secondary-color)!important;
 }
 
-
-
 #navbar {
     transition: 400ms;
 }
 
+.btn-accedi {
+    border: 1px solid black;
+}
+
+.btn-accedi:hover{
+    background-color: var(--secondary-color);
+}
 
 
 /* header  */
@@ -133,6 +148,19 @@ header {
         
     }
 }
+
+
+/* non serve questa cosa ma funziona, se dovessero rompersi gli ancor provare a decommentare */
+/* 
+.red-lent-nav > a{
+    text-decoration: none;
+    color: white;
+}
+.red-lent-nav > a:hover{
+    text-decoration: none;
+    color: var(--secondary-color);
+} */
+
 
 /* @media screen and (max-width:768px){
     .search-bar{
@@ -281,27 +309,6 @@ a.button-4-box:not(:hover) i {
 /* modal  */
 
 
-.modal-border {
-    border:1px solid var(--secondary-color);
-}
-
-.red-modal {
-    color: var(--secondary-color);
-}
-
-.red-modal:hover{
-    color:var(--secondary-color);
-    box-shadow: 1px 1px 5px black;
-}
-
-.white-modal {
-    color: white ;
-}
-
-.white-modal:hover{
-    color:white ;
-    box-shadow: 1px 1px 5px black;
-}
 
 
   
@@ -337,7 +344,7 @@ a.button-4-box:not(:hover) i {
   }
   .login::before {
     left: 40%;
-    bottom: -130%;
+    bottom: -100%;
     background-color:orangered;
     -webkit-animation: wawes 6s infinite linear;
     -moz-animation: wawes 6s infinite linear;
@@ -382,6 +389,39 @@ a.button-4-box:not(:hover) i {
   .login .btn-login:hover {
     background-color: var(--main-color);
   }
+
+  .login .btn-signup {
+    font-family: "Asap", sans-serif;
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 80px;
+    border: 0;
+    padding: 10px 0;
+    margin-top: 10px;
+    margin-left: -5px;
+    border-radius: 5px;
+    background-color: white;
+    -webkit-transition: background-color 300ms;
+    -moz-transition: background-color 300ms;
+    transition: background-color 300ms;
+  }
+  .login .btn-signup:hover {
+    background-color: var(--main-color);
+    color: white;
+  }
+
+  .btn-login>a{
+      text-decoration: none;
+      color: white;
+  }
+  
+  .btn-signup>a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
 
   
   
@@ -484,22 +524,53 @@ a.button-4-box:not(:hover) i {
   }
 
 .card-custom-carousel-2{
-    border-radius: 0px 30px;
+    border-radius: 30px;
     border:1px solid var(--secondary-color);
     overflow: hidden;
+    width: 200px !important;
+    height: 200px;
+
 }
 
-/* css scheda prodotto */
+/* css header scheda prodotto,login form ecc */
 
 .header{
 
     height: 50vh;
     min-height: 400px;
-    background:  linear-gradient(transparent 70%, rgba(207, 23, 23, 1) 50%),url(./media/logo-big-b.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    background:white ;
+    overflow: hidden;
+    position: relative;
+  
 }
+
+
+.skewedOneS {
+    position: absolute;
+    top: 0ox;
+    left: 20%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    bottom: -100%;
+    transform: skewY(-17deg);
+    z-index: 0;
+    transform-origin: top left;
+}
+
+.skewedTwoS {
+    position: absolute;
+    top: 0ox;
+    right: 20%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    bottom: -100%;
+    transform: skewY(17deg);
+    z-index: 0;
+    transform-origin: top right;
+}
+
 
 .card-scheda-prodotto{
     border-radius: 0px 30px;
@@ -514,3 +585,154 @@ a.button-4-box:not(:hover) i {
 }
 
 /* css pagina registrati */
+
+
+/* css pagina login */
+
+
+       
+.login-page {
+    overflow: hidden;
+    background-color: white;
+    padding: 40px 30px 30px 30px;
+    border-radius: 10px;
+    position: relative;
+    top: 150px;
+    left: 50%;
+    width: 90%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: -webkit-transform 300ms, box-shadow 300ms;
+    -moz-transition: -moz-transform 300ms, box-shadow 300ms;
+    transition: transform 300ms, box-shadow 300ms;
+    box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2);
+  }
+  .login-page::before, .login-page::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 45%;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 40%;
+    z-index: -1;
+  }
+  .login-page::before {
+    left: 50%;
+    bottom: -95%;
+    background-color:orangered;
+    -webkit-animation: wawes 6s infinite linear;
+    -moz-animation: wawes 6s infinite linear;
+    animation: wawes 6s infinite linear;
+  }
+  .login-page::after {
+    left: 50%;
+    bottom: -125%;
+    background-color:var(--secondary-color);
+    -webkit-animation: wawes 7s infinite;
+    -moz-animation: wawes 7s infinite;
+    animation: wawes 7s infinite;
+  }
+  .login-page .input-login {
+    font-family: "Asap", sans-serif;
+    display: block;
+    border-radius: 5px;
+    font-size: 16px;
+    background: white;
+    width: 100%;
+    border: 0;
+    padding: 10px 10px;
+    margin: 15px -10px;
+  }
+  .login-page .btn-login {
+    font-family: "Asap", sans-serif;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 80px;
+    border: 0;
+    padding: 10px 0;
+    margin-top: 10px;
+    margin-left: -5px;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    -webkit-transition: background-color 300ms;
+    -moz-transition: background-color 300ms;
+    transition: background-color 300ms;
+  }
+  .login-page .btn-login:hover {
+    background-color: var(--main-color);
+  }
+
+  .login-page .btn-signup {
+    font-family: "Asap", sans-serif;
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 80px;
+    border: 0;
+    padding: 10px 0;
+    margin-top: 10px;
+    margin-left: -5px;
+    border-radius: 5px;
+    background-color: white;
+    -webkit-transition: background-color 300ms;
+    -moz-transition: background-color 300ms;
+    transition: background-color 300ms;
+  }
+  .login-page .btn-signup:hover {
+    background-color: var(--main-color);
+    color: white;
+    
+  }
+
+.btn-signup > a:hover{
+    text-decoration: none;
+    color:white;
+}
+  
+
+  
+  
+  @-webkit-keyframes wawes {
+    from {
+      -webkit-transform: rotate(0);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @-moz-keyframes wawes {
+    from {
+      -moz-transform: rotate(0);
+    }
+    to {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  @keyframes wawes {
+    from {
+      -webkit-transform: rotate(0);
+      -moz-transform: rotate(0);
+      -ms-transform: rotate(0);
+      -o-transform: rotate(0);
+      transform: rotate(0);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+/* css profilo venditore  */
+
+/* foto profilo dipende ha la stessa classe della foto presentazione azienda  */
