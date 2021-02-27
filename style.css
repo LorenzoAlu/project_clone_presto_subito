@@ -177,16 +177,88 @@ header {
 
 /* sezione card skill */
 
-.card-skill{
-    height: 120px;
-    width: 120px;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    flex-direction: column;
-    border-radius: 15px 50px;
-    /* margin-top: -80px; */
+.card-main-page {
+  position: relative;
+  perspective: 40em;
+  display: grid;
+  transform-style: preserve-3d;
 }
+
+.card-mp-content {
+  grid-area: 1 / 1;
+  height: 140px;
+  width:240px;
+  transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:30px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 900;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 30px -3px rgba(0,0,0,.1);
+  border-radius: 20px;
+  transition: 1s;
+
+}
+
+.card-text-size {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.card-mp-content .enclosed {
+  background: rgba(207, 23, 23, 1);
+  line-height: 1;
+  color: white;
+  padding: 0 5px;
+  display: inline-block;
+  transform: translate(-1px, 1px) scale(0.75);
+  transform-origin: right center;
+}
+
+.card-main-page:before {
+  --bw: 9px;
+  grid-area: 1 / 1;
+  content: '';
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  margin-top: calc(-1 * var(--bw));
+  margin-left: calc(-1 * var(--bw));
+  background: transparent;
+  transform: translateX(-30px) rotateY(-30deg) rotateX(15deg) scale(1.03);
+  pointer-events: none;
+  border: var(--bw) solid orangered;
+  box-sizing: content-box;
+  border-radius: 30px;
+  transition: 1s;
+
+}
+
+
+.card-main-page:hover > div,
+.card-main-page:hover:before {
+  transform: none;
+}
+
+
+.card-main-page > div,
+.card-main-page:before {
+  will-change: transform;
+  transition: .3s transform cubic-bezier(.25,.46,.45,1);
+}
+
+.card-mp-content:hover{
+    padding: 30px ;
+
+}
+
+
+
 
 /* sezione 1  */
 
