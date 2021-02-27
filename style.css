@@ -1050,7 +1050,7 @@ height: 100%;
   padding: 40px 30px 30px 30px;
   border-radius: 10px;
   position: relative;
-  top: 600px;
+  top: 650px;
   left: 50%;
   width: 90%;
   -webkit-transform: translate(-50%, -50%);
@@ -1062,6 +1062,12 @@ height: 100%;
   -moz-transition: -moz-transform 300ms, box-shadow 300ms;
   transition: transform 300ms, box-shadow 300ms;
   box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2);
+}
+
+@media screen and (max-width:767px){
+  .login-insert-areariservata {
+    top:850px;
+  }
 }
 
 .login-insert-areariservata::before,
@@ -1127,4 +1133,15 @@ height: 100%;
 
 .login-insert-areariservata .btn-login:hover {
   background-color: var(--main-color);
+}
+
+.h-custom-areariservata{
+  height: 1500px;
+}
+
+@media screen and (max-width:767px){
+  .h-custom-areariservata{
+    height:1900px;
+  }
+
 }
