@@ -12,17 +12,13 @@
 
     <title>Subito.it</title>
 
-    <style>
-
-    
-    </style>
 
 
 </head>
 
 <body>
-      <!-- nav bar cazzi amari  -->
-      <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-transparent  fixed-top">
+    <!-- nav bar cazzi amari  -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-transparent  fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">
                 <img id="logo" width="50px" alt="logo "></a>
@@ -40,7 +36,7 @@
                         <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./schedaprodotto.html">Esplora Articoli  </a>
+                        <a class="nav-link" href="./schedaprodotto.html">Esplora Articoli </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./inserisciannuncio.html">Inserisci Annuncio </a>
@@ -52,8 +48,8 @@
                         <a class="nav-link" href="./registrati.html">Area Riservata </a>
                     </li>
                 </ul>
-                <button id="signbtn1" type="button" class="btn btn-accedi mx-2 d-none d-md-block  " data-bs-toggle="modal"
-                    data-bs-target="#modal-custom">
+                <button id="signbtn1" type="button" class="btn btn-accedi mx-2 d-none d-md-block  "
+                    data-bs-toggle="modal" data-bs-target="#modal-custom">
                     Accedi
                 </button>
             </div>
@@ -76,21 +72,21 @@
 
 
     <!-- inserisci annuncio  -->
-    <section class="container-fluid py-5 bg-grey  ">
+    <section class="container-fluid py-5   ">
         <div class="row  justify-content-center  align-items-center  " style="height: 400px;">
-           
-            <div class="col-12">  
-                <form class="login-annuncio-ok ">
+
+            <div class="col-12">
+                <form class="login-annuncio-ok  shadow-lg">
                     <div>
                         <img src="./media/logo.png" width="100px" class="img-fluid mx-auto d-block" alt="foto logo">
                     </div>
                     <div>
-                        <h3>   Annuncio Inserito</h3>
+                        <h3> Annuncio Inserito</h3>
                         <p>A breve troverai il tuo annuncio online </p>
                     </div>
                     <div>
                         <button class="btn-login">
-                        <a href="./index.html"> Torna alla Home</a>   
+                            <a href="./index.html"> Torna alla Home</a>
                         </button>
 
                     </div>
@@ -172,7 +168,6 @@
 
 
 
-    <!-- modale per login  -->
     <section class="container-fluid">
         <div class="row ">
             <div class="modal fade" id="modal-custom" tabindex="-1">
@@ -188,13 +183,17 @@
                         <input class="input-login" type="text" placeholder="Username">
                         <input class="input-login" type="password" placeholder="Password">
                         <div>
-                            <button class="btn-login">Login</button>
-                            <button class="btn-signup ms-2">Sing Up</button>
+                            <button class="btn-login"><a href="">Login</a> </button>
+                            <button class="btn-signup ms-2">
+                                <a href="./registrati.html"> Sing Up</a>
+                                </button>
                         </div>
                     </form>
                 </div>
             </div>
     </section>
+
+
 
 
 
@@ -207,6 +206,5 @@
 
 
 </body>
-<!-- RICORDATI CHE IL CSS DEL FORM E' INTERNO MONA  -->
 
 </html>

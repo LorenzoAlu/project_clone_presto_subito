@@ -12,8 +12,8 @@ window.addEventListener("scroll", ()=> {
 
 let scrolled = window.pageYOffset
 
-if(scrolled>130) {
-    navbar.classList.remove("bg-transparent")
+if(scrolled>100) {
+    navbar.classList.remove("bg-white")
     navbar.classList.add("navbar-dark","bg-secondary-color")
     signbtn.classList.add("btn-outline-light")
     signbtn.classList.remove("btn-outline-dark")
@@ -25,7 +25,7 @@ if(scrolled>130) {
 
 } else {
     navbar.classList.remove("navbar-dark","bg-secondary-color")
-    navbar.classList.add("navbar-light","bg-transparent")
+    navbar.classList.add("navbar-light","bg-white")
     signbtn.classList.remove("btn-outline-light")
     signbtn.classList.add("btn-outline-dark")
 

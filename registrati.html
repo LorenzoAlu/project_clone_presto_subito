@@ -5,73 +5,73 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Unica+One&display=swap" rel="stylesheet">
-    
+
     <title>Subito.it</title>
-    
+
     <!-- mi creo un css interno perche importo la barra di form da terze parti per evitare contrasti fra classi nel css esterno che mi sminchino tutte le pagine  -->
-    
+
     <style>
-        
         body {
             margin: 0px;
             padding: 0px;
         }
-        
+
         * {
             font-family: 'Roboto', sans-serif;
         }
-        
+
         h1,
         h2,
         h3,
         h4 {
             font-family: 'Unica One', cursive;
         }
-        
+
         :root {
             --main-color: rgb(164, 23, 38);
             --secondary-color: rgba(207, 23, 23, 1);
             --accent-color: rgb(249, 188, 91);
         }
-        
+
         .main-color {
             color: var(--main-color);
         }
-        
+
         .bg-main-color {
             background-color: var(--main-color);
         }
-        
+
         .secondary-color {
             color: var(--secondary-color);
         }
-        
+
         .bg-secondary-color {
             background-color: var(--secondary-color);
         }
-        
+
         .accent-color {
             color: var(--accent-color);
         }
-        
+
         .bg-accent {
             background-color: var(--accent-color);
         }
-        
-        
-        body {
+
+
+        /* body {
             background-color: #e3e3e3;
-        }
+        } */
         h4 {
             color: var(--secondary-color);
         }
+
         input,
-        input[type="radio"] + label,
-        input[type="checkbox"] + label:before,
+        input[type="radio"]+label,
+        input[type="checkbox"]+label:before,
         select option,
         select {
             width: 100%;
@@ -86,54 +86,66 @@
             transition: 0.35s ease-in-out;
             transition: all 0.35s ease-in-out;
         }
+
         input:focus {
             outline: 0;
             border-color: main-color;
         }
-        input:focus + .input-icon i {
+
+        input:focus+.input-icon i {
             color: var(--main-color);
         }
-        input:focus + .input-icon:after {
+
+        input:focus+.input-icon:after {
             border-right-color: var(--main-color);
         }
+
         input[type="radio"] {
             display: none;
         }
-        input[type="radio"] + label,
+
+        input[type="radio"]+label,
         select {
             display: inline-block;
             width: 50%;
             text-align: center;
             border-radius: 0;
         }
-        input[type="radio"] + label:first-of-type {
+
+        input[type="radio"]+label:first-of-type {
             border-top-left-radius: 3px;
             border-bottom-left-radius: 3px;
         }
-        input[type="radio"] + label:last-of-type {
+
+        input[type="radio"]+label:last-of-type {
             border-top-right-radius: 3px;
             border-bottom-right-radius: 3px;
         }
-        input[type="radio"] + label i {
+
+        input[type="radio"]+label i {
             padding-right: 0.4em;
         }
-        input[type="radio"]:checked + label,
-        input:checked + label:before,
+
+        input[type="radio"]:checked+label,
+        input:checked+label:before,
         select:focus,
         select:active {
             background-color: var(--secondary-color);
             color: #fff;
             border-color: var(--main-color);
         }
+
         input[type="checkbox"] {
             display: none;
         }
-        input[type="checkbox"] + label {
+
+        input[type="checkbox"]+label {
             position: relative;
             display: block;
             padding-left: 1.6em;
         }
-        input[type="checkbox"] + label:before {
+
+        input[type="checkbox"]+label:before {
             position: absolute;
             top: 0.2em;
             left: 0;
@@ -143,7 +155,8 @@
             padding: 0;
             content: "";
         }
-        input[type="checkbox"] + label:after {
+
+        input[type="checkbox"]+label:after {
             position: absolute;
             top: 0.45em;
             left: 0.2em;
@@ -153,47 +166,59 @@
             font-family: FontAwesome;
             content: "\f00c";
         }
-        input:checked + label:after {
+
+        input:checked+label:after {
             opacity: 1;
         }
+
         select {
             height: 3.4em;
             line-height: 2;
         }
+
         select:first-of-type {
             border-top-left-radius: 3px;
             border-bottom-left-radius: 3px;
         }
+
         select:last-of-type {
             border-top-right-radius: 3px;
             border-bottom-right-radius: 3px;
         }
+
         select:focus,
         select:active {
             outline: 0;
         }
+
         select option {
             background-color: var(--secondary-color);
             color: #fff;
         }
+
         .input-group {
             margin-bottom: 1em;
             zoom: 1;
         }
+
         .input-group:before,
         .input-group:after {
             content: "";
             display: table;
         }
+
         .input-group:after {
             clear: both;
         }
+
         .input-group-icon {
             position: relative;
         }
+
         .input-group-icon input {
             padding-left: 4.4em;
         }
+
         .input-group-icon .input-icon {
             position: absolute;
             top: 0;
@@ -204,6 +229,7 @@
             text-align: center;
             pointer-events: none;
         }
+
         .input-group-icon .input-icon:after {
             position: absolute;
             top: 0.6em;
@@ -218,6 +244,7 @@
             transition: 0.35s ease-in-out;
             transition: all 0.35s ease-in-out;
         }
+
         .input-group-icon .input-icon i {
             -webkit-transition: 0.35s ease-in-out;
             -moz-transition: 0.35s ease-in-out;
@@ -225,6 +252,7 @@
             transition: 0.35s ease-in-out;
             transition: all 0.35s ease-in-out;
         }
+
         .container {
             max-width: 38em;
             padding: 1em 3em 2em 3em;
@@ -233,128 +261,135 @@
             border-radius: 4.2px;
             box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
         }
+
         .row {
             zoom: 1;
         }
+
         .row:before,
         .row:after {
             content: "";
             display: table;
         }
+
         .row:after {
             clear: both;
         }
+
         .col-half {
             padding-right: 10px;
             float: left;
             width: 50%;
         }
+
         .col-half:last-of-type {
             padding-right: 0;
         }
+
         .col-third {
             padding-right: 10px;
             float: left;
             width: 33.33333333%;
         }
+
         .col-third:last-of-type {
             padding-right: 0;
         }
+
         @media only screen and (max-width: 540px) {
             .col-half {
                 width: 100%;
                 padding-right: 0;
             }
         }
-        
     </style>
-    
+
     <!-- RICORDATI CHE IN STYLE HAI DATO UN COLORE AL BODY , SE NON VUOI FARLO VEDERE DEVI O COPRIRE L HEADER O CAMBIARLO AL BODY, MA IN STA MANIERA IL FORM DI REGISTRAZIONE E MENO CARINO PERCHE NON CE IL CONTRASTO -->
 
 
 </head>
 
 <body>
-    
-    
-   <!-- nav bar cazzi amari  -->
-   <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-transparent  fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html">
-            <img id="logo" width="50px" alt="logo "></a>
-        <button id="signbtn" type="button" class="btn  mx-2 d-block d-md-none" data-bs-toggle="modal"
-            data-bs-target="#modal-custom">
-            <i class=" fas fa-user "></i>
-        </button>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
-            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./schedaprodotto.html">Esplora Articoli  </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./inserisciannuncio.html">Inserisci Annuncio </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./registrati.html">Registrati </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./registrati.html">Area Riservata </a>
-                </li>
-            </ul>
-            <button id="signbtn1" type="button" class="btn btn-accedi mx-2 d-none d-md-block  " data-bs-toggle="modal"
+
+
+    <!-- nav bar cazzi amari  -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-transparent  fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">
+                <img id="logo" width="50px" alt="logo "></a>
+            <button id="signbtn" type="button" class="btn  mx-2 d-block d-md-none" data-bs-toggle="modal"
                 data-bs-target="#modal-custom">
-                Accedi
+                <i class=" fas fa-user "></i>
             </button>
-        </div>
-    </div>
-</nav>
-
-
-<!-- header  -->
-<section class="container-fluid header">
-    <div class="row align-items-end   h-100">
-        <div class="col-12 text-center mb-4 z-class ">
-            <img src="./media/logo.png" alt="logo">
-        </div>
-        <span class="skewedOneS"></span>
-        <span class="skewedTwoS"></span>
-   
-    </div>
-</section>
-
-<!-- form registrazione -->
-<section class="container mb-4">
-    <div class="row justify-content-center">
-        <div class="col-12 ">
-            <div>
-                <h1 class="text-center secondary-color pb-5">
-                    Registrati
-                </h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./schedaprodotto.html">Esplora Articoli </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./inserisciannuncio.html">Inserisci Annuncio </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./registrati.html">Registrati </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./registrati.html">Area Riservata </a>
+                    </li>
+                </ul>
+                <button id="signbtn1" type="button" class="btn btn-accedi mx-2 d-none d-md-block  "
+                    data-bs-toggle="modal" data-bs-target="#modal-custom">
+                    Accedi
+                </button>
             </div>
-            
+        </div>
+    </nav>
+
+
+    <!-- header  -->
+    <section class="container-fluid header">
+        <div class="row align-items-end   h-100">
+            <div class="col-12 text-center mb-4 z-class ">
+                <img src="./media/logo.png" alt="logo">
+            </div>
+            <span class="skewedOneS"></span>
+            <span class="skewedTwoS"></span>
+
+        </div>
+    </section>
+
+    <!-- form registrazione -->
+    <section class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-12 ">
+                <div>
+                    <h1 class="text-center secondary-color pb-5">
+                        Registrati
+                    </h1>
+                </div>
+
                 <form>
-                    <div class="row">
+                    <div class="row ">
                         <h4>Account</h4>
                         <div class="input-group input-group-icon">
-                            <input type="text" placeholder="Nome e Cognome"/>
+                            <input type="text" placeholder="Nome e Cognome" />
                             <div class="input-icon"><i class="fa fa-user"></i></div>
                         </div>
                         <div class="input-group input-group-icon">
-                            <input type="email" placeholder="Indirizzo Email"/>
+                            <input type="email" placeholder="Indirizzo Email" />
                             <div class="input-icon"><i class="fa fa-envelope"></i></div>
                         </div>
                         <div class="input-group input-group-icon">
-                            <input type="password" placeholder="Password"/>
+                            <input type="password" placeholder="Password" />
                             <div class="input-icon"><i class="fa fa-key"></i></div>
                         </div>
-                    </div>       
+                    </div>
                     <div class="row">
                         <h4>Indirizzo</h4>
                         <div class="input-group input-group-icon col-12 ">
@@ -365,10 +400,10 @@
                     <div class="row">
                         <h4>Città</h4>
                         <div class="input-group input-group-icon col-12">
-                            <input type="text"  id="inputCity" placeholder="Inserisci la tua città ">
+                            <input type="text" id="inputCity" placeholder="Inserisci la tua città ">
                             <div class="input-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        </div>   
-                    </div>         
+                        </div>
+                    </div>
                     <div class="row">
                         <h4>Stato</h4>
                         <div class="input-group input-group-icon col-12 ">
@@ -379,31 +414,31 @@
                     <div class="row">
                         <h4>CAP</h4>
                         <div class="input-group input-group-icon col-12">
-                            <input type="text"  id="inputCap" placeholder="Inserisci il tuo CAP">
+                            <input type="text" id="inputCap" placeholder="Inserisci il tuo CAP">
                             <div class="input-icon"><i class="fas fa-mail-bulk"></i></div>
-                        </div>   
-                    </div>      
+                        </div>
+                    </div>
                     <div class="row my-3">
                         <div class="col-half">
                             <h4>Data di Nascita </h4>
                             <div class="input-group">
                                 <div class="col-third">
-                                    <input type="text" placeholder="1"/>
+                                    <input type="text" placeholder="1" />
                                 </div>
                                 <div class="col-third">
-                                    <input type="text" placeholder="12"/>
+                                    <input type="text" placeholder="12" />
                                 </div>
                                 <div class="col-third">
-                                    <input type="text" placeholder="2020"/>
+                                    <input type="text" placeholder="2020" />
                                 </div>
                             </div>
                         </div>
                         <div class="col-half">
                             <h4>Sesso</h4>
                             <div class="input-group">
-                                <input type="radio" name="gender" value="male" id="gender-male"/>
+                                <input type="radio" name="gender" value="male" id="gender-male" />
                                 <label for="gender-male">Male</label>
-                                <input type="radio" name="gender" value="female" id="gender-female"/>
+                                <input type="radio" name="gender" value="female" id="gender-female" />
                                 <label for="gender-female">Female</label>
                             </div>
                         </div>
@@ -411,18 +446,21 @@
                     <div class="row">
                         <h4>Dettagli Pagamento</h4>
                         <div class="input-group">
-                            <input type="radio" name="payment-method" value="card" id="payment-method-card" checked="true"/>
-                            <label for="payment-method-card"><span><i class="fa fa-cc-visa"></i>Credit Card</span></label>
-                            <input type="radio" name="payment-method" value="paypal" id="payment-method-paypal"/>
-                            <label for="payment-method-paypal"> <span><i class="fa fa-cc-paypal"></i>Paypal</span></label>
+                            <input type="radio" name="payment-method" value="card" id="payment-method-card"
+                                checked="true" />
+                            <label for="payment-method-card"><span><i class="fa fa-cc-visa"></i>Credit
+                                    Card</span></label>
+                            <input type="radio" name="payment-method" value="paypal" id="payment-method-paypal" />
+                            <label for="payment-method-paypal"> <span><i
+                                        class="fa fa-cc-paypal"></i>Paypal</span></label>
                         </div>
                         <div class="input-group input-group-icon">
-                            <input type="text" placeholder="Card Number"/>
+                            <input type="text" placeholder="Card Number" />
                             <div class="input-icon"><i class="fa fa-credit-card"></i></div>
-                        </div> 
+                        </div>
                         <div class="col-half ">
                             <div class="input-group input-group-icon">
-                                <input type="text" placeholder="Card CVC"/>
+                                <input type="text" placeholder="Card CVC" />
                                 <div class="input-icon"><i class="fa fa-user"></i></div>
                             </div>
                         </div>
@@ -442,45 +480,49 @@
                     <div class="row my-3">
                         <h4 class="text-center">Termini e Condizioni</h4>
                         <div class="input-group mt-3">
-                            <input type="checkbox" id="terms"/>
-                            <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
+                            <input type="checkbox" id="terms" />
+                            <label for="terms">I accept the terms and conditions for signing up to this service, and
+                                hereby confirm I have read the privacy policy.</label>
                         </div>
                     </div>
                     <button class="mt-5 text-white bg-secondary-color w-100 rounded-1 text-uppercase py-3">
-                        <h3>Registrati </h3>
+                        <h3><a class="text-decoration-none text-white" href="./registrazione_completata.html">
+                                Registrati</a> </h3>
                     </button>
+                    <p class="my-3">Sei gia registrato? <a class="secondary-color" href="./paginalogin.html"> Clicca
+                            Qui!</a></p>
                 </form>
-            
-        </div>
-    </div>
-</section>
 
-
-
-
-
-
-
-
-<!-- footer  -->
-
-
-<section class="container-fluid py-5 bg-secondary-color text-white">
-    <div class="row justify-content-evenly">
-        <div class="col-12">
-            <img src="./media/logo-w.png" width="70px" alt="logo sito">
-            <h2>Lorem</h2>
-        </div>
-        
-        
-        <div class="col-12 col-md-6">
-            <h3>Info legali</h3>
-            <p class="small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis ex sunt recusandae quod
-                cupiditate porro explicabo impedit dolores quia reprehenderit! Id, est praesentium iure
-                exercitationem ullam dolore et provident distinctio?</p>
             </div>
-            
-            
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- footer  -->
+
+
+    <section class="container-fluid py-5 bg-secondary-color text-white">
+        <div class="row justify-content-evenly">
+            <div class="col-12">
+                <img src="./media/logo-w.png" width="70px" alt="logo sito">
+                <h2>Lorem</h2>
+            </div>
+
+
+            <div class="col-12 col-md-6">
+                <h3>Info legali</h3>
+                <p class="small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis ex sunt recusandae quod
+                    cupiditate porro explicabo impedit dolores quia reprehenderit! Id, est praesentium iure
+                    exercitationem ullam dolore et provident distinctio?</p>
+            </div>
+
+
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-center d-none d-lg-flex">
                 <button class="btn-social">
                     <div class="links">
@@ -502,7 +544,7 @@
                     </span>
                 </button>
             </div>
-            
+
             <div class="col-12 col-md-6 d-flex justify-content-around align-items-center d-flex d-lg-none my-3">
                 <a href="">
                     <i class="text-white fab fa-facebook-f"></i>
@@ -517,61 +559,60 @@
                     <i class="text-white fab fa-twitter"></i>
                 </a>
             </div>
-            
+
             <!-- mappa di google  -->
             <!-- <div class="col-8 my-3 mx-auto d-block">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.362372823569!2d10.513726931685625!3d44.552881572474874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478006e1127e7097%3A0x26079b0d15993d91!2s42034%20Ciolla%20RE!5e0!3m2!1sit!2sit!4v1614032329810!5m2!1sit!2sit" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div> -->
-            
-            
+
+
         </div>
-        
-        
+
+
     </section>
-    
-    
-    
-    
+
+
+
+
     <!-- modale per login  -->
-    
+
+  
     <section class="container-fluid">
         <div class="row ">
-            
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content ">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">
-                            Log In
-                        </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="./media/logo.png" width="50px" class="img-fluid mx-auto d-block" alt="">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn white-modal  bg-secondary-color "
-                        data-bs-dismiss="modal">Close</button>
-                        <button type="button"
-                        class="btn btn-outline-light red-modal secondary-color modal-border ">Save
-                        changes</button>
-                    </div>
+            <div class="modal fade" id="modal-custom" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <form class="login modal-content ">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn-close " data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div>
+                            <img src="./media/logo.png" width="50px" class="img-fluid mx-auto d-block" alt="">
+                        </div>
+                        <input class="input-login" type="text" placeholder="Username">
+                        <input class="input-login" type="password" placeholder="Password">
+                        <div>
+                            <button class="btn-login"><a href="">Login</a> </button>
+                            <button class="btn-signup ms-2">
+                                <a href="./registrati.html"> Sing Up</a>
+                                </button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
-        
-    </div>
-</section>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/4ff5c0a70f.js" crossorigin="anonymous"></script>
-<script src="./main.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4ff5c0a70f.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
 
 
 
 </body>
 <!-- RICORDATI CHE IL CSS DEL FORM E' INTERNO MONA  -->
+
 </html>

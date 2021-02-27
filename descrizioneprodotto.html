@@ -397,33 +397,30 @@
 
     <section class="container-fluid">
         <div class="row ">
-
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
+            <div class="modal fade" id="modal-custom" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content ">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">
-                                Log In
-                            </h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <form class="login modal-content ">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn-close " data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div>
                             <img src="./media/logo.png" width="50px" class="img-fluid mx-auto d-block" alt="">
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn white-modal  bg-secondary-color "
-                                data-bs-dismiss="modal">Close</button>
-                            <button type="button"
-                                class="btn btn-outline-light red-modal secondary-color modal-border ">Save
-                                changes</button>
+                        <input class="input-login" type="text" placeholder="Username">
+                        <input class="input-login" type="password" placeholder="Password">
+                        <div>
+                            <button class="btn-login"><a href="">Login</a> </button>
+                            <button class="btn-signup ms-2">
+                                <a href="./registrati.html"> Sing Up</a>
+                                </button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
-
-        </div>
     </section>
+
+
 
 
 
