@@ -239,12 +239,10 @@ header {
 
 }
 
-
 .card-main-page:hover > div,
 .card-main-page:hover:before {
   transform: none;
 }
-
 
 .card-main-page > div,
 .card-main-page:before {
@@ -259,7 +257,6 @@ header {
 
 
 
-
 /* sezione 1  */
 
 .nav-pills .nav-link.active {
@@ -269,6 +266,8 @@ header {
 
 .card-custom {
     border: 2px solid var(--main-color);
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .btn-custom {
@@ -285,6 +284,7 @@ header {
     background-position: 0px 0px;
     position: relative;
     z-index: 1;
+    border-radius: 15px;
 }
 
 .btn-custom-icon {
@@ -577,7 +577,7 @@ a.button-4-box:not(:hover) i {
 .swiper-slide{
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background:transparent;
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -594,14 +594,21 @@ a.button-4-box:not(:hover) i {
     align-items: center;
   }
 
+/* css delle card contenute all'interno dei caroselli piccoli  */
+
+
 .card-custom-carousel-2{
     border-radius: 30px;
     border:1px solid var(--secondary-color);
     overflow: hidden;
     width: 200px !important;
     height: 200px;
+    background-color: white;
 
 }
+
+
+
 
 /* css header scheda prodotto,login form ecc */
 
@@ -847,7 +854,7 @@ a.button-4-box:not(:hover) i {
 .login-insert-ads::before {
     left: 50%;
     bottom: -20%;
-    background-color: orangered;
+    background-color: var(--secondary-color);
     -webkit-animation: wawes 6s infinite linear;
     -moz-animation: wawes 6s infinite linear;
     animation: wawes 6s infinite linear;
@@ -856,7 +863,7 @@ a.button-4-box:not(:hover) i {
 .login-insert-ads::after {
     left: 30%;
     bottom: -40%;
-    background-color: var(--secondary-color);
+    background-color: orangered;
     -webkit-animation: wawes 7s infinite;
     -moz-animation: wawes 7s infinite;
     animation: wawes 7s infinite;
@@ -911,8 +918,6 @@ a.button-4-box:not(:hover) i {
 
 }
 
-
-
 .input-group-text-custom {
 display: flex;
 align-items: center;
@@ -929,7 +934,6 @@ border-radius: 0.25rem;
 height: 100%;
 
 }
-
 
 .form-control-custom {
 display: block;
@@ -948,10 +952,6 @@ height: 100%;
 
 
 }
-
-
-
-
 
 /* css annuncio inserito torna alla home */
 
@@ -992,7 +992,7 @@ height: 100%;
 .login-annuncio-ok::before {
     left: 70%;
     bottom: -100%;
-    background-color: orangered;
+    background-color: var(--secondary-color);
     -webkit-animation: wawes 6s infinite linear;
     -moz-animation: wawes 6s infinite linear;
     animation: wawes 6s infinite linear;
@@ -1001,7 +1001,7 @@ height: 100%;
 .login-annuncio-ok::after {
     left: 50%;
     bottom: -120%;
-    background-color: var(--secondary-color);
+    background-color: orangered;
     -webkit-animation: wawes 7s infinite;
     -moz-animation: wawes 7s infinite;
     animation: wawes 7s infinite;
@@ -1041,3 +1041,90 @@ height: 100%;
     background-color: var(--main-color);
 }
     
+
+/* css area riservata  */
+
+.login-insert-areariservata {
+  overflow: hidden;
+  background-color: white;
+  padding: 40px 30px 30px 30px;
+  border-radius: 10px;
+  position: relative;
+  top: 600px;
+  left: 50%;
+  width: 90%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform 300ms, box-shadow 300ms;
+  -moz-transition: -moz-transform 300ms, box-shadow 300ms;
+  transition: transform 300ms, box-shadow 300ms;
+  box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2);
+}
+
+.login-insert-areariservata::before,
+.login-insert-areariservata::after {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 45%;
+  border-bottom-left-radius: 35%;
+  border-bottom-right-radius: 40%;
+  z-index: -1;
+}
+
+.login-insert-areariservata::before {
+  left: 80%;
+  bottom: 20%;
+  background-color: var(--secondary-color);
+  -webkit-animation: wawes 6s infinite linear;
+  -moz-animation: wawes 6s infinite linear;
+  animation: wawes 6s infinite linear;
+}
+
+.login-insert-areariservata::after {
+  left: 70%;
+  bottom: -10%;
+  background-color: orangered;
+  -webkit-animation: wawes 7s infinite;
+  -moz-animation: wawes 7s infinite;
+  animation: wawes 7s infinite;
+}
+
+.login-insert-areariservata .input-login {
+  font-family: "Asap", sans-serif;
+  display: block;
+  border-radius: 5px;
+  font-size: 16px;
+  background: white;
+  width: 100%;
+  border: 0;
+  padding: 10px 10px;
+  margin: 15px -10px;
+}
+
+.login-insert-areariservata .btn-login {
+  font-family: "Asap", sans-serif;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 200px;
+  border: 0;
+  padding: 10px 0;
+  margin-top: 10px;
+  margin-left: -5px;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  -webkit-transition: background-color 300ms;
+  -moz-transition: background-color 300ms;
+  transition: background-color 300ms;
+}
+
+.login-insert-areariservata .btn-login:hover {
+  background-color: var(--main-color);
+}

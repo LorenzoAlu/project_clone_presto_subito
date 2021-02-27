@@ -1,3 +1,6 @@
+
+
+
 const navbar = document.querySelector("#navbar")
 
 const logo =document.querySelector("#logo")
@@ -7,6 +10,8 @@ const signbtn=document.querySelector("#signbtn")
 const signbtn1=document.querySelector("#signbtn1")
 
 logo.src="./media/logo.png"
+
+navbar.classList.add("bg-white")
 
 window.addEventListener("scroll", ()=> {
 
