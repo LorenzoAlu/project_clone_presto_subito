@@ -11,254 +11,472 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Unica+One&display=swap" rel="stylesheet">
 
     <title>Subito.it</title>
+
+
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        a {
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        :root {
+            --main-color: rgb(164, 23, 38);
+            --secondary-color: rgba(207, 23, 23, 1);
+            --accent-color: rgb(249, 188, 91);
+        }
+
+        .main-color {
+            color: var(--main-color);
+        }
+
+        .bg-main-color {
+            background-color: var(--main-color);
+        }
+
+        .secondary-color {
+            color: var(--secondary-color);
+        }
+
+        .bg-secondary-color {
+            background-color: var(--secondary-color);
+        }
+
+        .accent-color {
+            color: var(--accent-color);
+        }
+
+        .bg-accent {
+            background-color: var(--accent-color);
+        }
+
+        .bg-grey {
+            background-color: #e3e3e3;
+
+        }
+
+        .test {
+            height: 100vh;
+            background-color: grey;
+        }
+
+        .opener {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: white;
+            width: 60px;
+            height: 60px;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+            z-index: 3;
+            position: relative;
+            transition: 1s;
+
+        }
+
+        .circle {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: white;
+            flex-direction: column;
+            ;
+            width: 50px;
+            height: 50px;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+            transition: 1s;
+            color: var(--secondary-color);
+            z-index: 2;
+        }
+
+        .card-custom-test-1 {
+
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 260px;
+            height: 130px;
+            background-color: white;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+            border-radius: 30px;
+            z-index: 1;
+            transition: 1s;
+            opacity: 0;
+            border: 2px solid var(--secondary-color);
+            text-align: center;
+            padding-right:60px;
+
+
+
+        }
+
+        .card-custom-test-2 {
+
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 130px;
+            height: 260px;
+            background-color: white;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+            border-radius: 30px;
+            z-index: 1;
+            transition: 1s;
+            opacity: 0;
+            flex-direction: column;
+            text-align: center;
+            border: 2px solid var(--secondary-color);
+            padding-top:60px;
+            padding-left: 10px;
+            padding-right:10px;
+
+
+        }
+
+        .card-custom-test-3 {
+
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 260px;
+            height: 130px;
+            background-color: white;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+            border-radius: 30px;
+            z-index: 1;
+            transition: 1s;
+            opacity: 0;
+            text-align: center;
+            border: 2px solid var(--secondary-color);
+            padding-left:58px;
+            
+        }
+
+        .card-custom-test-4 {
+
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 130px;
+            height: 260px;
+            background-color: white;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+            border-radius: 30px;
+            z-index: 1;
+            transition: 1s;
+            opacity: 0;
+            flex-direction: column;
+            text-align: center;
+            border: 2px solid var(--secondary-color);
+            padding-bottom: 50px;
+            padding-left: 10px;
+            padding-right:10px;
+
+
+
+
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- section 1  -->
 
-    <ul id="wrapperMain" class="nav nav-pills mb-3 d-flex justify-content-evenly bg-secondary-color pt-5" id="pills-tab"
-        role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active text-white" id="motori-tab" data-bs-toggle="pill" data-bs-target="#motori"
-                type="button" role="tab" aria-controls="motori" aria-selected="true">
-                <i class="fas fa-car"></i>
-                <p class="d-none d-md-block"> motori</p>
-            </button>
-        </li>
+    <!-- const categories = [["arredamento", "fas fa-home"], ["elettronica", "fas fa-laptop"], ["giardinaggio", "fas fa-cannabis"], ["hobby", "fas fa-gamepad"], ["immobili", "fas fa-igloo"], ["musica", "fas af-music"], ["sport", "fas fa-futbol"]] -->
 
 
-    </ul>
-    <div id="wrapperSecond" class="tab-content bg-white" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="motori" role="tabpanel">
-            <div class="row justify-content-evenly mx-0 ">
-                <!-- carta motori 1  -->
-                <div class="col-12 col-md-2 my-2 d-flex justify-content-center">
-                    <div class="card-custom ">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="immagine prodotto">
-                        <div class="card-body">
-                            <h5 class="card-title">Nome annuncio</h5>
-                            <p class="card-text"> <i class="fas fa-car"></i> Motori </p>
-                            <a class="btn-custom d-flex justify-content-center" href="./descrizioneprodotto.html">
-                                <span class="btn-custom-icon">
-                                    <i class="fas fa-chevron-right"></i></i>
-                                </span><span> Go!</span></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- carta motori 2  -->
-                <div class="col-12 col-md-2 my-2 d-flex justify-content-center">
-                    <div class="card-custom ">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="immagine prodotto">
-                        <div class="card-body">
-                            <h5 class="card-title">Nome annuncio</h5>
-                            <p class="card-text"> <i class="fas fa-car"></i> Motori </p>
-                            <a class="btn-custom d-flex justify-content-center" href="./descrizioneprodotto.html">
-                                <span class="btn-custom-icon">
-                                    <i class="fas fa-chevron-right"></i></i>
-                                </span><span> Go!</span></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- carta motori 3 -->
-                <div class="col-12 col-md-2 my-2 d-flex justify-content-center">
-                    <div class="card-custom ">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="immagine prodotto">
-                        <div class="card-body">
-                            <h5 class="card-title">Nome annuncio</h5>
-                            <p class="card-text"> <i class="fas fa-car"></i> Motori </p>
-                            <a class="btn-custom d-flex justify-content-center" href="./descrizioneprodotto.html">
-                                <span class="btn-custom-icon">
-                                    <i class="fas fa-chevron-right"></i></i>
-                                </span><span> Go!</span></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- carta motori 4  -->
-                <div class="col-12 col-md-2 my-2 d-flex justify-content-center">
-                    <div class="card-custom ">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="immagine prodotto">
-                        <div class="card-body">
-                            <h5 class="card-title">Nome annuncio</h5>
-                            <p class="card-text"> <i class="fas fa-car"></i> Motori </p>
-                            <a class="btn-custom d-flex justify-content-center" href="./descrizioneprodotto.html">
-                                <span class="btn-custom-icon">
-                                    <i class="fas fa-chevron-right"></i></i>
-                                </span><span> Go!</span></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- carta motori 5 -->
-                <div class="col-12 col-md-2 my-2 d-flex justify-content-center">
-                    <div class="card-custom ">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="immagine prodotto">
-                        <div class="card-body">
-                            <h5 class="card-title">Nome annuncio</h5>
-                            <p class="card-text"> <i class="fas fa-car"></i> Motori </p>
-                            <a class="btn-custom d-flex justify-content-center" href="./descrizioneprodotto.html">
-                                <span class="btn-custom-icon">
-                                    <i class="fas fa-chevron-right"></i></i>
-                                </span><span> Go!</span></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- carta motori 6  -->
-                <div class="col-12 col-md-2 my-2 d-flex justify-content-center">
-                    <div class="card-custom ">
-                        <img src="https://picsum.photos/300/200" class="card-img-top" alt="immagine prodotto">
-                        <div class="card-body">
-                            <h5 class="card-title">Nome annuncio</h5>
-                            <p class="card-text"> <i class="fas fa-car"></i> Motori </p>
-                            <a class="btn-custom d-flex justify-content-center" href="./descrizioneprodotto.html">
-                                <span class="btn-custom-icon">
-                                    <i class="fas fa-chevron-right"></i></i>
-                                </span><span> Go!</span></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+    <section class="container-fluid test d-flex justify-content-center align-items-center">
+        <div class="opener">
+            <img src="./media/logo_only_red.png" width="50px" alt="">
         </div>
-    </div>
 
 
+
+        <div id='card-1-opener' class="circle">
+            <i class="fas fa-money-check-alt"></i>
+        </div>
+        <div id='card-2-opener' class="circle">
+            <i class="fas fa-dollar-sign"></i>
+        </div>
+        <div id='card-3-opener' class="circle">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+        <div id='card-4-opener' class="circle">
+            <i class="fas fa-ad"></i>
+        </div>
+
+
+        <div class="card-custom-test-1 ">
+            <img src="./media/card.png" class="me-auto " width="100px" alt="">
+            <p class="secondary-color">Paga in tutta sicurezza</p>
+
+        </div>
+
+
+
+        <div class="card-custom-test-2 ">
+            <img src="./media/money.png" class="mx-auto" width="100px" alt="">
+            <p class="secondary-color">Fai crescere i tuoi guadagni</p>
+        </div>
+
+
+
+        <div class="card-custom-test-3 ">
+            <p class="secondary-color ">Acquisti veloci e sicuri</p>
+            <img src="./media/shopping.png" class="ms-auto" width="100px" alt="">
+
+        </div>
+        <div class="card-custom-test-4 ">
+            <img src="./media/market.png" class="mx-auto" width="100px" alt="">
+            <p class="secondary-color">Acquisti sicuri ovunque tu voglia</p>
+
+        </div>
+
+
+    </section>
 
 
 
 
     <script>
 
-        const categories = [["arredamento", "fas fa-home"], ["elettronica", "fas fa-laptop"], ["giardinaggio", "fas fa-cannabis"], ["hobby", "fas fa-gamepad"], ["immobili", "fas fa-igloo"], ["musica", "fas fa-music"], ["sport", "fas fa-futbol"]]
-        const categoriesWrapper = document.querySelector('#wrapperMain')
+        let opener = document.querySelector(".opener");
+        let circle = document.querySelectorAll(".circle");
+        let card1 = document.querySelector(".card-custom-test-1");
+        let card2 = document.querySelector(".card-custom-test-2");
+        let card3 = document.querySelector(".card-custom-test-3");
+        let card4 = document.querySelector(".card-custom-test-4");
+        let card1opened = document.querySelector("#card-1-opener");
+        let card2opened = document.querySelector("#card-2-opener");
+        let card3opened = document.querySelector("#card-3-opener");
+        let card4opened = document.querySelector("#card-4-opener");
+        console.log(card3)
+
+        let opened = false;
+        let cardOpen1 = false;
+        let cardOpen2 = false;
+        let cardOpen3 = false;
+        let cardOpen4 = false;
+
+        let dimensio = innerWidth;
+
+        opener.addEventListener('click', () => {
 
 
-        categories.forEach(el => {
+            if (opened == false) {
 
-            let li = document.createElement("li")
-            li.classList.add("nav-item")
+                circle.forEach((el, i) => {
+                    el.style.transform = `rotate(-${i * 360 / circle.length}deg) translate(${(dimensio * 100) / dimensio}px) rotate(${i * 360 / circle.length}deg)`
+                })
 
-            li.innerHTML =
+                opened = !opened;
 
-                `
-        <button class="nav-link  text-white" id="${el[0]}-tab" data-bs-toggle="pill"
-                data-bs-target="#${el[0]}" type="button" role="tab" aria-controls="${el[0]}"
-                aria-selected="false">
-                <i class="${el[1]}"></i>
-                <p class="d-none d-md-block"> ${el[0]}</p>
-            </button>
-`
-            categoriesWrapper.appendChild(li)
+
+
+
+                card1opened.addEventListener('click', () => {
+
+                    if (cardOpen1 == false) {
+                        card1.style.opacity = '1';
+                        cardOpen1 = !cardOpen1;
+                        card2opened.style.opacity = "0"
+                        card3opened.style.opacity = "0"
+                        card4opened.style.opacity = "0"
+                        opener.style.opacity = "0"
+
+                    } else {
+                        card1.style.opacity = '0';
+                        card2opened.style.opacity = "1"
+                        card3opened.style.opacity = "1"
+                        card4opened.style.opacity = "1"
+                        opener.style.opacity = "1"
+
+                        cardOpen1 = !cardOpen1;
+                    }
+                })
+
+
+                card2opened.addEventListener('click', () => {
+
+                    if (cardOpen2 == false) {
+                        card2.style.opacity = '1';
+                        cardOpen2 = !cardOpen2;
+                        card1opened.style.opacity = "0";
+                        card3opened.style.opacity = "0";
+                        card4opened.style.opacity = "0";
+                        opener.style.opacity = "0";
+
+                    } else {
+                        card2.style.opacity = '0';
+                        card1opened.style.opacity = "1";
+                        card3opened.style.opacity = "1";
+                        card4opened.style.opacity = "1";
+                        opener.style.opacity = "1";
+
+                        cardOpen2 = !cardOpen2;
+                    }
+                })
+
+
+                card3opened.addEventListener('click', () => {
+
+                    if (cardOpen3 == false) {
+                        card3.style.opacity = '1';
+                        cardOpen3 = !cardOpen3;
+                        card1opened.style.opacity = "0";
+                        card2opened.style.opacity = "0";
+                        card4opened.style.opacity = "0";
+                        opener.style.opacity = "0";
+
+                    } else {
+                        card3.style.opacity = '0';
+                        card1opened.style.opacity = "1";
+                        card2opened.style.opacity = "1";
+                        card4opened.style.opacity = "1";
+                        opener.style.opacity = "1";
+
+                        cardOpen3 = !cardOpen3;
+                    }
+                })
+
+                card4opened.addEventListener('click', () => {
+
+                    if (cardOpen4 == false) {
+                        card4.style.opacity = '1';
+                        cardOpen4 = !cardOpen4;
+                        card1opened.style.opacity = "0";
+                        card2opened.style.opacity = "0";
+                        card3opened.style.opacity = "0";
+                        opener.style.opacity = "0";
+
+                    } else {
+                        card4.style.opacity = '0';
+                        card1opened.style.opacity = "1";
+                        card2opened.style.opacity = "1";
+                        card3opened.style.opacity = "1";
+                        opener.style.opacity = "1";
+
+                        cardOpen4 = !cardOpen4;
+                    }
+                })
+
+
+
+            } else {
+                circle.forEach((el, i) => {
+                    el.style.transform = `rotate(${360 / circle.length}deg) translate(0px) rotate(${i * 360 / circle.length}deg)`
+                })
+
+                opened = !opened;
+
+                card1opened.addEventListener('click', () => {
+
+                    if (cardOpen1 == false) {
+                        card1.style.opacity = '1';
+                        cardOpen1 = !cardOpen1;
+                        card2opened.style.opacity = "0"
+                        card3opened.style.opacity = "0"
+                        card4opened.style.opacity = "0"
+                        opener.style.opacity = "0"
+
+                    } else {
+                        card1.style.opacity = '0';
+                        card2opened.style.opacity = "1"
+                        card3opened.style.opacity = "1"
+                        card4opened.style.opacity = "1"
+                        opener.style.opacity = "1"
+
+                        cardOpen1 = !cardOpen1;
+                    }
+                })
+
+
+                card2opened.addEventListener('click', () => {
+
+                    if (cardOpen2 == false) {
+                        card2.style.opacity = '1';
+                        cardOpen2 = !cardOpen2;
+                        card1opened.style.opacity = "0";
+                        card3opened.style.opacity = "0";
+                        card4opened.style.opacity = "0";
+                        opener.style.opacity = "0";
+
+                    } else {
+                        card2.style.opacity = '0';
+                        card1opened.style.opacity = "1";
+                        card3opened.style.opacity = "1";
+                        card4opened.style.opacity = "1";
+                        opener.style.opacity = "1";
+
+                        cardOpen2 = !cardOpen2;
+                    }
+                })
+
+
+                card3opened.addEventListener('click', () => {
+
+                    if (cardOpen3 == false) {
+                        card3.style.opacity = '1';
+                        cardOpen3 = !cardOpen3;
+                        card1opened.style.opacity = "0";
+                        card2opened.style.opacity = "0";
+                        card4opened.style.opacity = "0";
+                        opener.style.opacity = "0";
+
+                    } else {
+                        card3.style.opacity = '0';
+                        card1opened.style.opacity = "1";
+                        card2opened.style.opacity = "1";
+                        card4opened.style.opacity = "1";
+                        opener.style.opacity = "1";
+
+                        cardOpen3 = !cardOpen3;
+                    }
+                })
+
+                card4opened.addEventListener('click', () => {
+
+                    if (cardOpen4 == false) {
+                        card4.style.opacity = '1';
+                        cardOpen4 = !cardOpen4;
+                        card1opened.style.opacity = "0";
+                        card2opened.style.opacity = "0";
+                        card3opened.style.opacity = "0";
+                        opener.style.opacity = "0";
+
+                    } else {
+                        card4.style.opacity = '0';
+                        card1opened.style.opacity = "1";
+                        card2opened.style.opacity = "1";
+                        card3opened.style.opacity = "1";
+                        opener.style.opacity = "1";
+
+                        cardOpen4 = !cardOpen4;
+                    }
+                })
+
+
+
+            }
+
+
 
 
         })
 
 
-        const categoriesWrapperSecond = document.querySelector('#wrapperSecond')
 
-        categories.forEach(el => {
-
-            let div = document.createElement("div")
-            div.classList.add("tab-pane", "fade", "show")
-            div.id = `${el[0]}`
-
-            div.innerHTML =
-
-                `
-    <div class="row justify-content-evenly mx-0 ">
-        <div class="col-12 col-md-2 my-2 d-flex justify-content-center">
-        <div class="card-custom ">
-        <img src="https://picsum.photos/300/200" class="card-img-top" alt="immagine prodotto">
-        <div class="card-body">
-            <h5 class="card-title">Nome annuncio</h5>
-            <p class="card-text"><i class="${el[1]}"></i>  ${el[0]} </p>
-            <a class="btn-custom d-flex justify-content-center" href="./descrizioneprodotto.html">
-                <span class="btn-custom-icon">
-                    <i class="fas fa-chevron-right"></i></i>
-                </span><span> Go!</span></a>
-          </div>
-    </div>
-    </div>
-
-    <div class="col-12 col-md-2 my-2 d-flex justify-content-center">
-        <div class="card-custom ">
-        <img src="https://picsum.photos/300/200" class="card-img-top" alt="immagine prodotto">
-        <div class="card-body">
-            <h5 class="card-title">Nome annuncio</h5>
-            <p class="card-text"><i class="${el[1]}"></i>  ${el[0]} </p>
-            <a class="btn-custom d-flex justify-content-center" href="./descrizioneprodotto.html">
-                <span class="btn-custom-icon">
-                    <i class="fas fa-chevron-right"></i></i>
-                </span><span> Go!</span></a>
-          </div>
-    </div>
-    </div>
-
-    <div class="col-12 col-md-2 my-2 d-flex justify-content-center">
-        <div class="card-custom ">
-        <img src="https://picsum.photos/300/200" class="card-img-top" alt="immagine prodotto">
-        <div class="card-body">
-            <h5 class="card-title">Nome annuncio</h5>
-            <p class="card-text"><i class="${el[1]}"></i>  ${el[0]} </p>
-            <a class="btn-custom d-flex justify-content-center" href="./descrizioneprodotto.html">
-                <span class="btn-custom-icon">
-                    <i class="fas fa-chevron-right"></i></i>
-                </span><span> Go!</span></a>
-          </div>
-    </div>
-    </div>
-
-    <div class="col-12 col-md-2 my-2 d-flex justify-content-center">
-        <div class="card-custom ">
-        <img src="https://picsum.photos/300/200" class="card-img-top" alt="immagine prodotto">
-        <div class="card-body">
-            <h5 class="card-title">Nome annuncio</h5>
-            <p class="card-text"><i class="${el[1]}"></i>  ${el[0]} </p>
-            <a class="btn-custom d-flex justify-content-center" href="./descrizioneprodotto.html">
-                <span class="btn-custom-icon">
-                    <i class="fas fa-chevron-right"></i></i>
-                </span><span> Go!</span></a>
-          </div>
-    </div>
-    </div>
-
-    <div class="col-12 col-md-2 my-2 d-flex justify-content-center">
-        <div class="card-custom ">
-        <img src="https://picsum.photos/300/200" class="card-img-top" alt="immagine prodotto">
-        <div class="card-body">
-            <h5 class="card-title">Nome annuncio</h5>
-            <p class="card-text"><i class="${el[1]}"></i>  ${el[0]} </p>
-            <a class="btn-custom d-flex justify-content-center" href="./descrizioneprodotto.html">
-                <span class="btn-custom-icon">
-                    <i class="fas fa-chevron-right"></i></i>
-                </span><span> Go!</span></a>
-          </div>
-    </div>
-    </div>
-
-    <div class="col-12 col-md-2 my-2 d-flex justify-content-center">
-        <div class="card-custom ">
-        <img src="https://picsum.photos/300/200" class="card-img-top" alt="immagine prodotto">
-        <div class="card-body">
-            <h5 class="card-title">Nome annuncio</h5>
-            <p class="card-text"><i class="${el[1]}"></i>  ${el[0]} </p>
-            <a class="btn-custom d-flex justify-content-center" href="./descrizioneprodotto.html">
-                <span class="btn-custom-icon">
-                    <i class="fas fa-chevron-right"></i></i>
-                </span><span> Go!</span></a>
-          </div>
-    </div>
-    </div>
-
-    </div>
-
-    
-`
-            categoriesWrapperSecond.appendChild(div)
-
-
-        })
-
+        //prova card
 
 
 
@@ -276,7 +494,7 @@
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/4ff5c0a70f.js" crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
+
 
 
 </body>
