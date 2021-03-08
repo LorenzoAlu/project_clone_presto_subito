@@ -63,6 +63,7 @@
             background-color: grey;
         }
 
+        
         .opener {
             display: flex;
             align-items: center;
@@ -89,10 +90,11 @@
             ;
             width: 50px;
             height: 50px;
-            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
             transition: 1s;
             color: var(--secondary-color);
             z-index: 2;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+
         }
 
         .card-custom-test-1 {
@@ -105,13 +107,13 @@
             height: 130px;
             background-color: white;
             box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-            border-radius: 30px;
+            border-radius: 20px;
             z-index: 1;
             transition: 1s;
             opacity: 0;
             border: 2px solid var(--secondary-color);
             text-align: center;
-            padding-right:60px;
+            padding:10px 30px 10px 10px;
 
 
 
@@ -127,16 +129,15 @@
             height: 260px;
             background-color: white;
             box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-            border-radius: 30px;
+            border-radius: 20px;
             z-index: 1;
             transition: 1s;
             opacity: 0;
             flex-direction: column;
             text-align: center;
             border: 2px solid var(--secondary-color);
-            padding-top:60px;
-            padding-left: 10px;
-            padding-right:10px;
+            padding:40px 10px 10px 10px;
+
 
 
         }
@@ -151,14 +152,14 @@
             height: 130px;
             background-color: white;
             box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-            border-radius: 30px;
+            border-radius: 20px;
             z-index: 1;
             transition: 1s;
             opacity: 0;
             text-align: center;
             border: 2px solid var(--secondary-color);
-            padding-left:58px;
-            
+            padding:10px 10px 10px 40px;
+
         }
 
         .card-custom-test-4 {
@@ -171,20 +172,28 @@
             height: 260px;
             background-color: white;
             box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-            border-radius: 30px;
+            border-radius: 20px;
             z-index: 1;
             transition: 1s;
             opacity: 0;
             flex-direction: column;
             text-align: center;
             border: 2px solid var(--secondary-color);
-            padding-bottom: 50px;
-            padding-left: 10px;
-            padding-right:10px;
+            padding:10px 10px 40px 10px;
+
+        }
+
+        .first-letter{
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        
 
 
-
-
+        #card-1-opener,#card-2-opener,#card-3-opener,#card-4-opener{
+            transition: 600ms;
+            
         }
     </style>
 </head>
@@ -217,29 +226,40 @@
 
 
         <div class="card-custom-test-1 ">
-            <img src="./media/card.png" class="me-auto " width="100px" alt="">
-            <p class="secondary-color">Paga in tutta sicurezza</p>
-
+            <img src="./media/card.png" class="mx-auto img-fluid d-block " width="120px" alt="">
+            <div class="d-flex  align-items-center ">
+            <p class=" secondary-color small my-auto ">
+                <span class="secondary-color first-letter">P</span>aga in tutta sicurezza</p>
+            </div>  
         </div>
 
 
 
         <div class="card-custom-test-2 ">
-            <img src="./media/money.png" class="mx-auto" width="100px" alt="">
-            <p class="secondary-color">Fai crescere i tuoi guadagni</p>
+            <img src="./media/money.png" class="mx-auto d-block img-fluid" width="120px"  alt="">
+            <div class="d-flex  align-items-center ">
+            <p class="secondary-color small mx-auto pt-3">
+                <span class="secondary-color first-letter">F</span>ai crescere i tuoi guadagni
+            </p>
+            </div>
         </div>
 
 
 
         <div class="card-custom-test-3 ">
-            <p class="secondary-color ">Acquisti veloci e sicuri</p>
-            <img src="./media/shopping.png" class="ms-auto" width="100px" alt="">
+            <div class="d-flex  align-items-center ">
+            <p class="secondary-color small my-auto">
+                <span class="secondary-color first-letter">A</span>cquisti sicuri</p>
+            </div>
+            <img src="./media/shopping.png" class="ms-auto img-fluid d-block" width="110px" alt="">
 
         </div>
         <div class="card-custom-test-4 ">
-            <img src="./media/market.png" class="mx-auto" width="100px" alt="">
-            <p class="secondary-color">Acquisti sicuri ovunque tu voglia</p>
-
+            <img src="./media/market.png" class="mx-auto img-fluid d-block mb-3" width="120px" alt="">
+            <div class="">
+            <p class="secondary-color small">
+                <span class="secondary-color first-letter pt-4">A</span>cquisti sicuri ovunque tu voglia</p>
+            </div>
         </div>
 
 
@@ -287,6 +307,8 @@
                 card1opened.addEventListener('click', () => {
 
                     if (cardOpen1 == false) {
+                        card1opened.style.transform=`translate(128px)`
+                        card1opened.style.border='2px solid var(--secondary-color)'
                         card1.style.opacity = '1';
                         cardOpen1 = !cardOpen1;
                         card2opened.style.opacity = "0"
@@ -295,6 +317,8 @@
                         opener.style.opacity = "0"
 
                     } else {
+                        card1opened.style.transform=`translate(100px)`
+                        card1opened.style.border='none'
                         card1.style.opacity = '0';
                         card2opened.style.opacity = "1"
                         card3opened.style.opacity = "1"
@@ -309,6 +333,8 @@
                 card2opened.addEventListener('click', () => {
 
                     if (cardOpen2 == false) {
+                        card2opened.style.transform=`translatey(-128px)`
+                        card2opened.style.border='2px solid var(--secondary-color)'
                         card2.style.opacity = '1';
                         cardOpen2 = !cardOpen2;
                         card1opened.style.opacity = "0";
@@ -317,6 +343,8 @@
                         opener.style.opacity = "0";
 
                     } else {
+                        card2opened.style.transform=`translatey(-100px)`
+                        card2opened.style.border='none'
                         card2.style.opacity = '0';
                         card1opened.style.opacity = "1";
                         card3opened.style.opacity = "1";
@@ -331,6 +359,8 @@
                 card3opened.addEventListener('click', () => {
 
                     if (cardOpen3 == false) {
+                        card3opened.style.transform=`translate(-128px)`
+                        card3opened.style.border='2px solid var(--secondary-color)'
                         card3.style.opacity = '1';
                         cardOpen3 = !cardOpen3;
                         card1opened.style.opacity = "0";
@@ -339,6 +369,8 @@
                         opener.style.opacity = "0";
 
                     } else {
+                        card3opened.style.transform=`translate(-100px)`
+                        card3opened.style.border='none'
                         card3.style.opacity = '0';
                         card1opened.style.opacity = "1";
                         card2opened.style.opacity = "1";
@@ -352,6 +384,8 @@
                 card4opened.addEventListener('click', () => {
 
                     if (cardOpen4 == false) {
+                        card4opened.style.transform=`translatey(128px)`
+                        card4opened.style.border='2px solid var(--secondary-color)'
                         card4.style.opacity = '1';
                         cardOpen4 = !cardOpen4;
                         card1opened.style.opacity = "0";
@@ -360,6 +394,8 @@
                         opener.style.opacity = "0";
 
                     } else {
+                        card4opened.style.transform=`translatey(100px)`
+                        card4opened.style.border='none'
                         card4.style.opacity = '0';
                         card1opened.style.opacity = "1";
                         card2opened.style.opacity = "1";

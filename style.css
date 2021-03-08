@@ -57,6 +57,7 @@ h4 {
 .sticky-filter{
     position: sticky;
     top: 100px;
+    
 }
 
 
@@ -64,6 +65,7 @@ h4 {
 
 .red-lent{
     color:white ;
+  
 }
 .red-lent:hover{
     color:var(--secondary-color)!important;
@@ -306,6 +308,142 @@ header {
         padding: 5px;
     }
 
+
+/* presentazione js figo  */
+
+
+
+.opener {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  z-index: 3;
+  position: relative;
+  transition: 1s;
+
+}
+
+.circle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: white;
+  flex-direction: column;
+  ;
+  width: 50px;
+  height: 50px;
+  transition: 1s;
+  color: var(--secondary-color);
+  z-index: 2;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+.card-custom-test-1 {
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 130px;
+  background-color: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  z-index: 1;
+  transition: 1s;
+  opacity: 0;
+  border: 2px solid var(--secondary-color);
+  text-align: center;
+  padding:10px 30px 10px 10px;
+
+
+
+}
+
+.card-custom-test-2 {
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 260px;
+  background-color: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  z-index: 1;
+  transition: 1s;
+  opacity: 0;
+  flex-direction: column;
+  text-align: center;
+  border: 2px solid var(--secondary-color);
+  padding:40px 10px 10px 10px;
+
+
+
+}
+
+.card-custom-test-3 {
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 130px;
+  background-color: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  z-index: 1;
+  transition: 1s;
+  opacity: 0;
+  text-align: center;
+  border: 2px solid var(--secondary-color);
+  padding:10px 10px 10px 40px;
+
+}
+
+.card-custom-test-4 {
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 260px;
+  background-color: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  z-index: 1;
+  transition: 1s;
+  opacity: 0;
+  flex-direction: column;
+  text-align: center;
+  border: 2px solid var(--secondary-color);
+  padding:10px 10px 40px 10px;
+
+}
+
+.first-letter{
+  font-size: 17px;
+  font-weight: bold;
+}
+
+
+
+
+#card-1-opener,#card-2-opener,#card-3-opener,#card-4-opener{
+  transition: 600ms;
+  
+}
 
 /* footer  */
 

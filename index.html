@@ -317,6 +317,70 @@
     </section>
 
 
+    <!-- sezione js figo  -->
+    <section class="container-fluid bg-white my-5">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-11 ">
+                <h3 class="secondary-color text-end">Perchè usare Subito.it?</h3>
+            </div>
+            <div class="col-12 col-md-6  my-5 test d-flex justify-content-center align-items-center">
+                <div class="opener">
+                    <img src="./media/logo_only_red.png" width="50px" alt="">
+                </div>
+        
+                <div id='card-1-opener' class="circle">
+                    <i class="fas fa-money-check-alt"></i>
+                </div>
+                <div id='card-2-opener' class="circle">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div id='card-3-opener' class="circle">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div id='card-4-opener' class="circle">
+                    <i class="fas fa-ad"></i>
+                </div>
+        
+        
+                <div class="card-custom-test-1 ">
+                    <img src="./media/card.png" class="mx-auto img-fluid d-block " width="120px" alt="">
+                    <div class="d-flex  align-items-center ">
+                    <p class=" secondary-color small my-auto ">
+                        <span class="secondary-color first-letter">P</span>aga in tutta sicurezza</p>
+                    </div>  
+                </div>
+                <div class="card-custom-test-2 ">
+                    <img src="./media/money.png" class="mx-auto d-block img-fluid" width="120px"  alt="">
+                    <div class="d-flex  align-items-center ">
+                    <p class="secondary-color small mx-auto pt-3">
+                        <span class="secondary-color first-letter">F</span>ai crescere i tuoi guadagni
+                    </p>
+                    </div>
+                </div>
+                <div class="card-custom-test-3 ">
+                    <div class="d-flex  align-items-center ">
+                    <p class="secondary-color small my-auto">
+                        <span class="secondary-color first-letter">A</span>cquisti sicuri</p>
+                    </div>
+                    <img src="./media/shopping.png" class="ms-auto img-fluid d-block" width="110px" alt="">
+                </div>
+                <div class="card-custom-test-4 ">
+                    <img src="./media/market.png" class="mx-auto img-fluid d-block mb-3" width="120px" alt="">
+                    <div class="">
+                    <p class="secondary-color small">
+                        <span class="secondary-color first-letter pt-4">A</span>cquisti sicuri ovunque tu voglia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5   py-5">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo ipsum ipsa nihil tempore,
+                    veritatis, modi totam ducimus consectetur distinctio debitis consequatur. Rerum voluptatem illum
+                    pariatur? Maxime est qui assumenda voluptas?</p>
+            </div>
+
+        </div>
+    </section>
+
     <!-- form iscriviti e ottieni tutti i vantaggi -->
 
 
@@ -596,6 +660,245 @@
 
 
 
+        let opener = document.querySelector(".opener");
+        let circle = document.querySelectorAll(".circle");
+        let card1 = document.querySelector(".card-custom-test-1");
+        let card2 = document.querySelector(".card-custom-test-2");
+        let card3 = document.querySelector(".card-custom-test-3");
+        let card4 = document.querySelector(".card-custom-test-4");
+        let card1opened = document.querySelector("#card-1-opener");
+        let card2opened = document.querySelector("#card-2-opener");
+        let card3opened = document.querySelector("#card-3-opener");
+        let card4opened = document.querySelector("#card-4-opener");
+        console.log(card3)
+
+        let opened = false;
+        let cardOpen1 = false;
+        let cardOpen2 = false;
+        let cardOpen3 = false;
+        let cardOpen4 = false;
+
+        let dimensio = innerWidth;
+
+        opener.addEventListener('click', () => {
+
+
+            if (opened == false) {
+
+                circle.forEach((el, i) => {
+                    el.style.transform = `rotate(-${i * 360 / circle.length}deg) translate(${(dimensio * 100) / dimensio}px) rotate(${i * 360 / circle.length}deg)`
+                })
+
+                opened = !opened;
+
+
+
+
+                card1opened.addEventListener('click', () => {
+
+                    if (cardOpen1 == false) {
+                        card1opened.style.transform=`translate(128px)`
+                        card1opened.style.border='2px solid var(--secondary-color)'
+                        card1.style.opacity = '1';
+                        cardOpen1 = !cardOpen1;
+                        card2opened.style.opacity = "0"
+                        card3opened.style.opacity = "0"
+                        card4opened.style.opacity = "0"
+                        opener.style.opacity = "0"
+
+                    } else {
+                        card1opened.style.transform=`translate(100px)`
+                        card1opened.style.border='none'
+                        card1.style.opacity = '0';
+                        card2opened.style.opacity = "1"
+                        card3opened.style.opacity = "1"
+                        card4opened.style.opacity = "1"
+                        opener.style.opacity = "1"
+
+                        cardOpen1 = !cardOpen1;
+                    }
+                })
+
+
+                card2opened.addEventListener('click', () => {
+
+                    if (cardOpen2 == false) {
+                        card2opened.style.transform=`translatey(-128px)`
+                        card2opened.style.border='2px solid var(--secondary-color)'
+                        card2.style.opacity = '1';
+                        cardOpen2 = !cardOpen2;
+                        card1opened.style.opacity = "0";
+                        card3opened.style.opacity = "0";
+                        card4opened.style.opacity = "0";
+                        opener.style.opacity = "0";
+
+                    } else {
+                        card2opened.style.transform=`translatey(-100px)`
+                        card2opened.style.border='none'
+                        card2.style.opacity = '0';
+                        card1opened.style.opacity = "1";
+                        card3opened.style.opacity = "1";
+                        card4opened.style.opacity = "1";
+                        opener.style.opacity = "1";
+
+                        cardOpen2 = !cardOpen2;
+                    }
+                })
+
+
+                card3opened.addEventListener('click', () => {
+
+                    if (cardOpen3 == false) {
+                        card3opened.style.transform=`translate(-128px)`
+                        card3opened.style.border='2px solid var(--secondary-color)'
+                        card3.style.opacity = '1';
+                        cardOpen3 = !cardOpen3;
+                        card1opened.style.opacity = "0";
+                        card2opened.style.opacity = "0";
+                        card4opened.style.opacity = "0";
+                        opener.style.opacity = "0";
+
+                    } else {
+                        card3opened.style.transform=`translate(-100px)`
+                        card3opened.style.border='none'
+                        card3.style.opacity = '0';
+                        card1opened.style.opacity = "1";
+                        card2opened.style.opacity = "1";
+                        card4opened.style.opacity = "1";
+                        opener.style.opacity = "1";
+
+                        cardOpen3 = !cardOpen3;
+                    }
+                })
+
+                card4opened.addEventListener('click', () => {
+
+                    if (cardOpen4 == false) {
+                        card4opened.style.transform=`translatey(128px)`
+                        card4opened.style.border='2px solid var(--secondary-color)'
+                        card4.style.opacity = '1';
+                        cardOpen4 = !cardOpen4;
+                        card1opened.style.opacity = "0";
+                        card2opened.style.opacity = "0";
+                        card3opened.style.opacity = "0";
+                        opener.style.opacity = "0";
+
+                    } else {
+                        card4opened.style.transform=`translatey(100px)`
+                        card4opened.style.border='none'
+                        card4.style.opacity = '0';
+                        card1opened.style.opacity = "1";
+                        card2opened.style.opacity = "1";
+                        card3opened.style.opacity = "1";
+                        opener.style.opacity = "1";
+
+                        cardOpen4 = !cardOpen4;
+                    }
+                })
+
+
+
+            } else {
+                circle.forEach((el, i) => {
+                    el.style.transform = `rotate(${360 / circle.length}deg) translate(0px) rotate(${i * 360 / circle.length}deg)`
+                })
+
+                opened = !opened;
+
+                card1opened.addEventListener('click', () => {
+
+                    if (cardOpen1 == false) {
+                        card1.style.opacity = '1';
+                        cardOpen1 = !cardOpen1;
+                        card2opened.style.opacity = "0"
+                        card3opened.style.opacity = "0"
+                        card4opened.style.opacity = "0"
+                        opener.style.opacity = "0"
+
+                    } else {
+                        card1.style.opacity = '0';
+                        card2opened.style.opacity = "1"
+                        card3opened.style.opacity = "1"
+                        card4opened.style.opacity = "1"
+                        opener.style.opacity = "1"
+
+                        cardOpen1 = !cardOpen1;
+                    }
+                })
+
+
+                card2opened.addEventListener('click', () => {
+
+                    if (cardOpen2 == false) {
+                        card2.style.opacity = '1';
+                        cardOpen2 = !cardOpen2;
+                        card1opened.style.opacity = "0";
+                        card3opened.style.opacity = "0";
+                        card4opened.style.opacity = "0";
+                        opener.style.opacity = "0";
+
+                    } else {
+                        card2.style.opacity = '0';
+                        card1opened.style.opacity = "1";
+                        card3opened.style.opacity = "1";
+                        card4opened.style.opacity = "1";
+                        opener.style.opacity = "1";
+
+                        cardOpen2 = !cardOpen2;
+                    }
+                })
+
+
+                card3opened.addEventListener('click', () => {
+
+                    if (cardOpen3 == false) {
+                        card3.style.opacity = '1';
+                        cardOpen3 = !cardOpen3;
+                        card1opened.style.opacity = "0";
+                        card2opened.style.opacity = "0";
+                        card4opened.style.opacity = "0";
+                        opener.style.opacity = "0";
+
+                    } else {
+                        card3.style.opacity = '0';
+                        card1opened.style.opacity = "1";
+                        card2opened.style.opacity = "1";
+                        card4opened.style.opacity = "1";
+                        opener.style.opacity = "1";
+
+                        cardOpen3 = !cardOpen3;
+                    }
+                })
+
+                card4opened.addEventListener('click', () => {
+
+                    if (cardOpen4 == false) {
+                        card4.style.opacity = '1';
+                        cardOpen4 = !cardOpen4;
+                        card1opened.style.opacity = "0";
+                        card2opened.style.opacity = "0";
+                        card3opened.style.opacity = "0";
+                        opener.style.opacity = "0";
+
+                    } else {
+                        card4.style.opacity = '0';
+                        card1opened.style.opacity = "1";
+                        card2opened.style.opacity = "1";
+                        card3opened.style.opacity = "1";
+                        opener.style.opacity = "1";
+
+                        cardOpen4 = !cardOpen4;
+                    }
+                })
+
+
+
+            }
+
+
+
+
+        })
 
 
 
