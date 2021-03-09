@@ -311,6 +311,14 @@ header {
 
 /* presentazione js figo  */
 
+.background-circle{
+  height: 50vh;
+  background: url(./media/circle_2.png);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
 
 
 .opener {
